@@ -16,9 +16,9 @@ export const BiographySection = ({ texto }: BiographySectionProps) => {
             <BookOpen className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Uma vida de amor
+            Uma jornada de superação
           </p>
-          <h2 className="section-title">História de Vida bbbg kkkkkkkk</h2>
+          <h2 className="section-title">História do Desafio</h2>
           <div className="section-divider" />
         </AnimatedSection>
 

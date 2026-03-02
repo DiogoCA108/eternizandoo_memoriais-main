@@ -1,6 +1,6 @@
 import { memorialData_16km } from "@/data/memoriais/memorialData_16km";
 import { MemorialNav } from "@/components/MemorialNav";
-import { HeroSection } from "@/components/HeroSection";
+import { HeroSection_16km } from "@/components/HeroSection_16km";
 import { BiographySection } from "@/components/BiographySection";
 import { HabitsSection } from "@/components/HabitsSection";
 import { PhotoGallery } from "@/components/PhotoGallery";
@@ -21,7 +21,7 @@ const Memorial_16km = () => {
 
             {/* Hero + divider at end */}
             <div>
-                <HeroSection
+                <HeroSection_16km
                     nome={memorialData_16km.nome_completo}
                     nascimento={memorialData_16km.data_nascimento}
                     falecimento={memorialData_16km.data_falecimento}

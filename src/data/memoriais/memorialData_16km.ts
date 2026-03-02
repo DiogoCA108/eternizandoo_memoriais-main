@@ -63,12 +63,12 @@ E que venham os próximos. 💪`,
   ],
 
   arvore_genealogica: [
-    { nome: "Diogo Gonçalves Martins", relacao: "atleta" },
-    { nome: "Wellison Silveira", relacao: "atleta" },
+    { nome: "Diogo Gonçalves Martins", relacao: "pai" },
+    { nome: "Wellison Silveira", relacao: "mae" },
     { nome: "Desafio 16KM", relacao: "conquista" },
-    { nome: "Trevo das Aguilhadas", relacao: "ponto_partida" },
-    { nome: "Lagoa Redonda", relacao: "ponto_chegada" },
-    { nome: "Primeira Ladeira 2KM", relacao: "maior_desafio_inicial" },
+    { nome: "Trevo das Aguilhadas", relacao: "conjuge" },
+    { nome: "Lagoa Redonda", relacao: "filho" },
+    { nome: "Primeira Ladeira 2KM", relacao: "filho" },
   ],
 
   linha_tempo: [
