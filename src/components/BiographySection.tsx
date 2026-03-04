@@ -3,9 +3,15 @@ import { BookOpen } from "lucide-react";
 
 interface BiographySectionProps {
   texto: string;
+  titulo?: string;
+  subtitulo?: string;
 }
 
-export const BiographySection = ({ texto }: BiographySectionProps) => {
+export const BiographySection = ({
+  texto,
+  titulo = "História de Vida",
+  subtitulo = "Uma jornada de superação"
+}: BiographySectionProps) => {
   const paragraphs = texto.split("\n\n");
 
   return (
@@ -16,9 +22,9 @@ export const BiographySection = ({ texto }: BiographySectionProps) => {
             <BookOpen className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Uma jornada de superação
+            {subtitulo}
           </p>
-          <h2 className="section-title">História do Desafio</h2>
+          <h2 className="section-title">{titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 

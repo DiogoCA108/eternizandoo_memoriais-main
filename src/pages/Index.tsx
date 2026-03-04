@@ -1,4 +1,4 @@
-import { memorialData } from "@/data/memoriais/memorialData";
+import { memoriais } from "@/data/memoriais";
 import { MemorialNav } from "@/components/MemorialNav";
 import { HeroSection } from "@/components/HeroSection";
 import { BiographySection } from "@/components/BiographySection";
@@ -22,30 +22,32 @@ const Index = () => {
       {/* Hero + divider at end */}
       <div>
         <HeroSection
-          nome={memorialData.nome_completo}
-          nascimento={memorialData.data_nascimento}
-          falecimento={memorialData.data_falecimento}
-          frase={memorialData.frase_homenagem}
+          heroImage={memoriais["joao"].heroImage}
+          profilePhoto={memoriais["joao"].profilePhoto}
+          nome={memoriais["joao"].nome_completo}
+          nascimento={memoriais["joao"].data_nascimento}
+          falecimento={memoriais["joao"].data_falecimento}
+          frase={memoriais["joao"].frase_homenagem}
         />
         <SectionDivider />
       </div>
 
       {/* bg-card (light) - Biografia + divider */}
       <div className="bg-card">
-        <BiographySection texto={memorialData.texto_biografico} />
+        <BiographySection texto={memoriais["joao"].texto_biografico} />
         <SectionDivider />
       </div>
 
       {/* bg-background (default) - Hábitos + divider */}
       <div className="bg-background">
-        <HabitsSection habitos={memorialData.habitos} />
+        <HabitsSection habitos={memoriais["joao"].habitos} />
         <SectionDivider />
       </div>
 
       {/* bg-card (light) - Galeria (divider inside component) */}
       <div id="galeria" className="bg-card">
         <PhotoGallery
-          photos={memorialData.galeria.map((g) => ({ src: g.url, caption: g.legenda }))}
+          photos={memoriais["joao"].galeria.map((g) => ({ src: g.url, caption: g.legenda }))}
           visibleCount={7}
           title="Galeria de Memórias"
           subtitle="Momentos eternos"
@@ -54,31 +56,31 @@ const Index = () => {
 
       {/* bg-background (default) - Músicas + divider */}
       <div className="bg-background">
-        <MusicSection musicas={memorialData.musicas} />
+        <MusicSection musicas={memoriais["joao"].musicas} />
         <SectionDivider />
       </div>
 
       {/* bg-card (light) - Árvore + divider */}
       <div className="bg-card">
-        <FamilyTreeSection membros={memorialData.arvore_genealogica} />
+        <FamilyTreeSection membros={memoriais["joao"].arvore_genealogica} />
         <SectionDivider />
       </div>
 
       {/* bg-background (default) - Timeline + divider */}
       <div className="bg-background">
-        <TimelineSection eventos={memorialData.linha_tempo} />
+        <TimelineSection eventos={memoriais["joao"].linha_tempo} />
         <SectionDivider />
       </div>
 
       {/* bg-card (light) - Homenagens + divider */}
       <div id="homenagens" className="bg-card">
-        <TributesSection homenagens={memorialData.homenagens} />
+        <TributesSection homenagens={memoriais["joao"].homenagens} />
         <SectionDivider />
       </div>
 
       {/* bg-background (default) - Localização */}
       <div className="bg-background">
-        <LocationSection localizacao={memorialData.localizacao_tumulo} />
+        <LocationSection localizacao={memoriais["joao"].localizacao_tumulo} />
       </div>
 
       {/* Family Dedication */}

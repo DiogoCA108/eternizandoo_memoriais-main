@@ -1,5 +1,4 @@
-import heroImage from "@/assets/hero-memorial.jpg";
-import profilePhoto from "@/assets/profile-photo.jpg";
+
 import { AnimatedSection } from "./AnimatedSection";
 import ScrollIndicator from "./ScrollIndicator";
 import { Cross, Star } from "lucide-react";
@@ -9,6 +8,8 @@ interface HeroSectionProps {
   nascimento: string;
   falecimento: string;
   frase: string;
+  heroImage: string;
+  profilePhoto: string;
 }
 
 const formatDate = (dateStr: string) => {
@@ -25,6 +26,8 @@ export const HeroSection = ({
   nascimento,
   falecimento,
   frase,
+  heroImage,
+  profilePhoto,
 }: HeroSectionProps) => {
   const scrollDown = () => {
     document.getElementById("biografia")?.scrollIntoView({ behavior: "smooth" });
