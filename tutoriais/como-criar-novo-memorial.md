@@ -22,7 +22,7 @@ Antes de mexer no código, precisamos colocar as fotos da pessoa no lugar certo.
 
 Sua pasta deve ficar assim:
 ```text
-src/assets/memoriais/maria/
+src/assets/fotos/maria/
 ├── hero.jpg             (Foto principal do topo)
 ├── profile.jpg          (Foto redonda)
 └── gallery/             (Pasta com o resto das fotos)
@@ -51,9 +51,9 @@ Leia os comentários dentro do arquivo, eles te guiarão. Basicamente você prec
 
 1. **Importar as fotos:** No início do arquivo, apague as barras `//` das 3 linhas de importação e troque a palavra `SLUG` pelo nome da pasta que você criou (ex: `maria`).
    ```typescript
-   import heroImage from "@/assets/memoriais/maria/hero.jpg";
-   import profilePhoto from "@/assets/memoriais/maria/profile.jpg";
-   import foto1 from "@/assets/memoriais/maria/gallery/foto1.jpg";
+   import heroImage from "@/assets/fotos/maria/hero.jpg";
+   import profilePhoto from "@/assets/fotos/maria/profile.jpg";
+   import foto1 from "@/assets/fotos/maria/gallery/foto1.jpg";
    // Importe as outras fotos da galeria aqui copiando a linha de cima...
    ```
 

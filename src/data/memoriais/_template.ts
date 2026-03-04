@@ -1,14 +1,14 @@
 import type { MemorialData } from "./types";
 
 // 1. Copie este arquivo e renomeie para o slug do memorial (ex: maria.ts)
-// 2. Crie a pasta src/assets/memoriais/SLUG/ e coloque as fotos
+// 2. Crie a pasta src/assets/fotos/SLUG/ e coloque as fotos
 // 3. Substitua 'SLUG' abaixo pelo nome real da pasta
-// 4. Adicione o import no arquivo src/data/memoriais/index.ts
+// 4. Adicione o import no arquivo src/data/fotos/index.ts
 
 // IMPORTANTE: Descomente os imports de imagem abaixo e atualize os caminhos!
-// import heroImage from "@/assets/memoriais/SLUG/hero.jpg";
-// import profilePhoto from "@/assets/memoriais/SLUG/profile.jpg";
-// import foto1 from "@/assets/memoriais/SLUG/gallery/foto1.jpg";
+// import heroImage from "@/assets/fotos/SLUG/hero.jpg";
+// import profilePhoto from "@/assets/fotos/SLUG/profile.jpg";
+// import foto1 from "@/assets/fotos/SLUG/gallery/foto1.jpg";
 
 export const memorialData: MemorialData = {
     slug: "SLUG",
