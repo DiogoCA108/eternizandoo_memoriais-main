@@ -1,24 +1,9 @@
 import type { MemorialData } from "./types";
 
-import heroImage from "@/assets/memoriais/16km/hero-memorial-16km.jpg";
-import profilePhoto from "@/assets/memoriais/16km/profile-photo-16km.jpg";
-
-import fotoLargadaAguilhadas from "@/assets/memoriais/16km/gallery/fotoLargadaAguilhadas.png";
-import fotoPrimeiraLadeira from "@/assets/memoriais/16km/gallery/fotoPrimeiraLadeira.jpg";
-import fotoPercursoNublado from "@/assets/memoriais/16km/gallery/fotoPercursoNublado.jpg";
-import fotoKm8 from "@/assets/memoriais/16km/gallery/fotoKm8.jpg";
-import fotoKmFinal from "@/assets/memoriais/16km/gallery/fotoKmFinal.jpg";
-import fotoPosDesafio from "@/assets/memoriais/16km/gallery/fotoPosDesafio.jpg";
-import fotoAguaGelada from "@/assets/memoriais/16km/gallery/fotoAguaGelada.jpeg";
-import fotoAcai from "@/assets/memoriais/16km/gallery/fotoAcai.jpeg";
-import fotoDiogo from "@/assets/memoriais/16km/gallery/fotoDiogo.jpg";
-import fotoWellison from "@/assets/memoriais/16km/gallery/fotoWellison.jpg";
-import fotoDuplaUnida from "@/assets/memoriais/16km/gallery/fotoDuplaUnida.jpg";
-
 export const desafio16kmData: MemorialData = {
     slug: "16km",
-    heroImage,
-    profilePhoto,
+    heroImage: "/memoriais/16km/hero-memorial-16km.jpg",
+    profilePhoto: "/memoriais/16km/profile-photo-16km.jpg",
 
     nome_completo: "Desafio 16KM - Lagoa Redonda",
     data_nascimento: "2025-12-21",
@@ -56,17 +41,17 @@ E que venham os próximos. \uD83D\uDCAA`,
     ],
 
     galeria: [
-        { tipo: "foto", url: fotoWellison, legenda: "Wellison Silveira" },
-        { tipo: "foto", url: fotoDiogo, legenda: "Diogo Martins" },
-        { tipo: "foto", url: fotoLargadaAguilhadas, legenda: "Largada no Trevo das Aguilhadas, 28/02/2026" },
-        { tipo: "foto", url: fotoPrimeiraLadeira, legenda: "Primeira ladeira de 2KM logo no início" },
-        { tipo: "foto", url: fotoPercursoNublado, legenda: "Percurso sob céu nublado" },
-        { tipo: "foto", url: fotoKm8, legenda: "Metade do percurso, foco total" },
-        { tipo: "foto", url: fotoKmFinal, legenda: "Quilômetros finais — batalha mental" },
-        { tipo: "foto", url: fotoAguaGelada, legenda: "Água gelada para recuperar as forças" },
-        { tipo: "foto", url: fotoAcai, legenda: "Açaí pós-desafio" },
-        { tipo: "foto", url: fotoDuplaUnida, legenda: "Quem sai junto chega junto" },
-        { tipo: "foto", url: fotoPosDesafio, legenda: "Missão cumprida após 16KM" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoWellison.jpg", legenda: "Wellison Silveira" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoDiogo.jpg", legenda: "Diogo Martins" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoLargadaAguilhadas.png", legenda: "Largada no Trevo das Aguilhadas, 28/02/2026" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoPrimeiraLadeira.jpg", legenda: "Primeira ladeira de 2KM logo no início" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoPercursoNublado.jpg", legenda: "Percurso sob céu nublado" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoKm8.jpg", legenda: "Metade do percurso, foco total" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoKmFinal.jpg", legenda: "Quilômetros finais — batalha mental" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoAguaGelada.jpeg", legenda: "Água gelada para recuperar as forças" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoAcai.jpeg", legenda: "Açaí pós-desafio" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoDuplaUnida.jpg", legenda: "Quem sai junto chega junto" },
+        { tipo: "foto", url: "/memoriais/16km/gallery/fotoPosDesafio.jpg", legenda: "Missão cumprida após 16KM" },
     ],
 
     musicas: [

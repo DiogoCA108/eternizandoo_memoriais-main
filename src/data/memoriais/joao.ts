@@ -1,25 +1,9 @@
 import type { MemorialData } from "./types";
 
-import heroImage from "@/assets/memoriais/joao/hero.jpg";
-import profilePhoto from "@/assets/memoriais/joao/profile.jpg";
-
-import fotoCasamento from "@/assets/memoriais/joao/gallery/foto-casamento-1963.jpg";
-import fotoFilhos from "@/assets/memoriais/joao/gallery/foto-filhos-1975.jpg";
-import fotoFormatura from "@/assets/memoriais/joao/gallery/foto-formatura.jpg";
-import fotoNatal1990 from "@/assets/memoriais/joao/gallery/foto-natal-1990.jpg";
-import fotoJardim from "@/assets/memoriais/joao/gallery/foto-jardim.jpg";
-import fotoNetos from "@/assets/memoriais/joao/gallery/foto-netos-2010.jpg";
-import fotoAniversario80 from "@/assets/memoriais/joao/gallery/foto-aniversario-80.jpg";
-import fotoNatal2023 from "@/assets/memoriais/joao/gallery/foto-natal-2023.jpg";
-import fotoProfessora from "@/assets/memoriais/joao/gallery/foto-professora.jpg";
-import fotoCozinhando from "@/assets/memoriais/joao/gallery/foto-cozinhando.jpg";
-import fotoCasalParque from "@/assets/memoriais/joao/gallery/foto-casal-parque.jpg";
-import fotoIgreja from "@/assets/memoriais/joao/gallery/foto-igreja.jpg";
-
 export const joaoData: MemorialData = {
     slug: "joao",
-    heroImage,
-    profilePhoto,
+    heroImage: "/memoriais/joao/hero.jpg",
+    profilePhoto: "/memoriais/joao/profile.jpg",
 
     nome_completo: "João Heleno da Silva",
     data_nascimento: "1942-03-15",
@@ -55,18 +39,18 @@ Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com
     ],
 
     galeria: [
-        { tipo: "foto", url: fotoCasamento, legenda: "Casamento, 1900" },
-        { tipo: "foto", url: fotoFilhos, legenda: "Com os filhos, 1975" },
-        { tipo: "foto", url: fotoFormatura, legenda: "Formatura como professora" },
-        { tipo: "foto", url: fotoNatal1990, legenda: "Natal em família, 1990" },
-        { tipo: "foto", url: fotoJardim, legenda: "No jardim que tanto amava" },
-        { tipo: "foto", url: fotoNetos, legenda: "Com os netos, 2010" },
-        { tipo: "foto", url: fotoAniversario80, legenda: "Aniversário de 80 anos" },
-        { tipo: "foto", url: fotoNatal2023, legenda: "Último Natal juntos, 2023" },
-        { tipo: "foto", url: fotoProfessora, legenda: "Dona Helena na sala de aula" },
-        { tipo: "foto", url: fotoCozinhando, legenda: "Preparando o bolo de fubá" },
-        { tipo: "foto", url: fotoCasalParque, legenda: "Com Antônio Carlos no parque" },
-        { tipo: "foto", url: fotoIgreja, legenda: "Família após a missa de domingo" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-casamento-1963.jpg", legenda: "Casamento, 1900" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-filhos-1975.jpg", legenda: "Com os filhos, 1975" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-formatura.jpg", legenda: "Formatura como professora" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-natal-1990.jpg", legenda: "Natal em família, 1990" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-jardim.jpg", legenda: "No jardim que tanto amava" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-netos-2010.jpg", legenda: "Com os netos, 2010" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-aniversario-80.jpg", legenda: "Aniversário de 80 anos" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-natal-2023.jpg", legenda: "Último Natal juntos, 2023" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-professora.jpg", legenda: "Dona Helena na sala de aula" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-cozinhando.jpg", legenda: "Preparando o bolo de fubá" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-casal-parque.jpg", legenda: "Com Antônio Carlos no parque" },
+        { tipo: "foto", url: "/memoriais/joao/gallery/foto-igreja.jpg", legenda: "Família após a missa de domingo" },
     ],
 
     musicas: [

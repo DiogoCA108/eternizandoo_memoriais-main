@@ -6,28 +6,17 @@ import type { MemorialData } from "./types";
 // 4. Adicione o import no arquivo src/data/memoriais/index.ts
 
 // IMPORTANTE: Descomente os imports de imagem abaixo e atualize os caminhos!
-import heroImage from "@/assets/memoriais/maria/hero.png";
-import profilePhoto from "@/assets/memoriais/maria/profile.png";
-import foto1 from "@/assets/memoriais/maria/gallery/foto1.png";
-import foto2 from "@/assets/memoriais/maria/gallery/foto2.png";
-import foto3 from "@/assets/memoriais/maria/gallery/foto3.png";
-import foto4 from "@/assets/memoriais/maria/gallery/foto4.png";
-import foto5 from "@/assets/memoriais/maria/gallery/foto5.png";
-import foto6 from "@/assets/memoriais/maria/gallery/foto6.png";
-import foto7 from "@/assets/memoriais/maria/gallery/foto7.png";
-import foto8 from "@/assets/memoriais/maria/gallery/foto8.png";
-import foto9 from "@/assets/memoriais/maria/gallery/foto9.png";
-import foto10 from "@/assets/memoriais/maria/gallery/foto10.png";
-import foto11 from "@/assets/memoriais/maria/gallery/foto11.png";
-import foto12 from "@/assets/memoriais/maria/gallery/foto12.png";
+// import heroImage from "@/assets/memoriais/maria/hero.png";
+// import profilePhoto from "@/assets/memoriais/maria/profile.png";
+// import foto1 from "@/assets/memoriais/maria/gallery/foto1.png";
 
 export const mariaData: MemorialData = {
     slug: "maria",
 
     // --- IMAGENS PRINCIPAIS ---
     // Troque as strings abaixo pelas variáveis importadas acima
-    heroImage,
-    profilePhoto,
+    heroImage: "/memoriais/maria/hero.png",
+    profilePhoto: "/memoriais/maria/profile.png",
 
     // --- DADOS BÁSICOS ---
     nome_completo: "Maria MENDONÇA",
@@ -60,18 +49,18 @@ Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com
     ],
 
     galeria: [
-        { tipo: "foto", url: foto1, legenda: "Legenda da foto 1" },
-        { tipo: "foto", url: foto2, legenda: "Legenda da foto 2" },
-        { tipo: "foto", url: foto3, legenda: "Legenda da foto 3" },
-        { tipo: "foto", url: foto4, legenda: "Legenda da foto 4" },
-        { tipo: "foto", url: foto5, legenda: "Legenda da foto 5" },
-        { tipo: "foto", url: foto6, legenda: "Legenda da foto 6" },
-        { tipo: "foto", url: foto7, legenda: "Legenda da foto 7" },
-        { tipo: "foto", url: foto8, legenda: "Legenda da foto 8" },
-        { tipo: "foto", url: foto9, legenda: "Legenda da foto 9" },
-        { tipo: "foto", url: foto10, legenda: "Legenda da foto 10" },
-        { tipo: "foto", url: foto11, legenda: "Legenda da foto 11" },
-        { tipo: "foto", url: foto12, legenda: "Legenda da foto 12" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto1.png", legenda: "Legenda da foto 1" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto2.png", legenda: "Legenda da foto 2" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto3.png", legenda: "Legenda da foto 3" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto4.png", legenda: "Legenda da foto 4" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto5.png", legenda: "Legenda da foto 5" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto6.png", legenda: "Legenda da foto 6" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto7.png", legenda: "Legenda da foto 7" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto8.png", legenda: "Legenda da foto 8" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto9.png", legenda: "Legenda da foto 9" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto10.png", legenda: "Legenda da foto 10" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto11.png", legenda: "Legenda da foto 11" },
+        { tipo: "foto", url: "/memoriais/maria/gallery/foto12.png", legenda: "Legenda da foto 12" },
     ],
 
     musicas: [
