@@ -1,5 +1,5 @@
 import { AnimatedSection } from "./AnimatedSection";
-import { Clock } from "lucide-react";
+import { Hourglass } from "lucide-react";
 
 interface TimelineEvent {
   titulo_evento: string;
@@ -21,11 +21,11 @@ export const TimelineSection = ({ eventos }: TimelineSectionProps) => {
   const sorted = [...eventos].sort((a, b) => a.ordem - b.ordem);
 
   return (
-    <section className="memorial-section">
+    <section className="memorial-section pb-0">
       <div className="memorial-container">
         <AnimatedSection>
           <div className="flex justify-center mb-3">
-            <Clock className="w-7 h-7 text-primary/60" />
+            <Hourglass className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
             Uma jornada de vida

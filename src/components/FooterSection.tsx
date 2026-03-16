@@ -1,24 +1,26 @@
 import { AnimatedSection } from "./AnimatedSection";
-import { QrCode, Cross } from "lucide-react";
+import { QrCode } from "lucide-react";
 
 export const FooterSection = () => {
   return (
     <footer className="py-16 px-4 bg-foreground text-primary-foreground">
       <div className="max-w-3xl mx-auto text-center">
         <AnimatedSection>
-          <Cross className="w-6 h-6 text-gold-light/60 mx-auto mb-6" />
-
-          <h3 className="font-display text-2xl text-primary-foreground/90 mb-4">Memorial Eterno</h3>
+          <img
+            src="/logomx.png"
+            alt="Logomarca Memorial"
+            className="h-[132px] mx-auto mb-3"
+          />
           <p className="text-primary-foreground/60 font-body text-sm leading-relaxed max-w-lg mx-auto mb-8">
-            Eternize a memória de quem você ama. Com o Memorial Além do Tempo,
-            a história de vida do seu ente querido estará sempre acessível — de qualquer lugar, a qualquer momento —
-            através de um simples QR Code.
+            Eternize a memória de quem você ama.
+            Um memorial que vai além do tempo, mantendo viva a história do
+            seu ente querido — sempre acessível, de qualquer lugar, a qualquer momento.
           </p>
 
           <div className="flex items-center justify-center gap-3 mb-8">
             <QrCode className="w-5 h-5 text-gold-light/50" />
             <span className="text-primary-foreground/50 font-body text-xs">
-              Acesse via QR Code no local de homenagem
+              Acesse também via QR Code no local da homenagem.
             </span>
           </div>
 
@@ -29,7 +31,7 @@ export const FooterSection = () => {
 
         <div className="mt-16 pt-6 border-t border-primary-foreground/10">
           <p className="text-primary-foreground/30 font-body text-xs">
-            Memorial Além do Tempo © {new Date().getFullYear()} — Preservando memórias para a eternidade
+            Memoriais Eternos © {new Date().getFullYear()} — Preservando memórias para a eternidade — Desenvolvido por Eternizandoo.
           </p>
         </div>
       </div>

@@ -1,22 +1,30 @@
 import type { MemorialData } from "./types";
 
 // 1. Copie este arquivo e renomeie para o slug do memorial (ex: maria.ts)
-// 2. Crie a pasta src/assets/fotos/SLUG/ e coloque as fotos
+// 2. Crie a pasta public/fotos/SLUG/ e coloque as fotos
 // 3. Substitua 'SLUG' abaixo pelo nome real da pasta
-// 4. Adicione o import no arquivo src/data/fotos/index.ts
+// 4. Adicione o import no arquivo src/data/memoriais/index.ts
 
-// IMPORTANTE: Descomente os imports de imagem abaixo e atualize os caminhos!
-// import heroImage from "@/assets/fotos/SLUG/hero.jpg";
-// import profilePhoto from "@/assets/fotos/SLUG/profile.jpg";
-// import foto1 from "@/assets/fotos/SLUG/gallery/foto1.jpg";
+// Use caminhos diretos apontando para public/fotos/SLUG/ na seção de imagens
 
 export const memorialData: MemorialData = {
     slug: "SLUG",
 
+    // Configuração de exibição das seções (opcional - por padrão todas que tiverem dados são exibidas)
+    secoes_ativas: {
+        biografia: true,
+        habitos: true,
+        galeria: true,
+        musicas: true,
+        arvore_genealogica: true,
+        linha_tempo: true,
+        homenagens: true,
+        localizacao: true,
+    },
+
     // --- IMAGENS PRINCIPAIS ---
-    // Troque as strings abaixo pelas variáveis importadas acima
-    heroImage: "",
-    profilePhoto: "",
+    heroImage: "/fotos/SLUG/hero.jpg",
+    profilePhoto: "/fotos/SLUG/profile.jpg",
 
     // --- DADOS BÁSICOS ---
     nome_completo: "Nome Completo",
@@ -69,6 +77,7 @@ Pode ter múltiplos parágrafos separados por quebra de linha dupla.`,
         endereco: "Endereço completo",
         horario_visita: "Segunda a Domingo, das 7h às 18h",
         link_maps: "URL do Google Maps",
+        query_mapa: "", // Termo de busca exato ou coordenadas lat,long para o mapa (opcional)
         foto_url: "", // Opcional
     },
 };

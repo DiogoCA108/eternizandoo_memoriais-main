@@ -11,9 +11,9 @@ Neste exemplo, vamos criar um memorial para uma pessoa chamada "Maria".
 Antes de mexer no código, precisamos colocar as fotos da pessoa no lugar certo.
 
 1. No seu explorador de arquivos (lado esquerdo do VS Code), vá até a pasta:
-   `src/assets/memoriais/`
+   `public/fotos/`
 2. **Crie uma nova pasta** com o nome da pessoa (preferencialmente letras minúsculas e sem espaços). 
-   *Exemplo*: Clique com o botão direito em `memoriais`, escolha "New Folder" (Nova Pasta) e digite `maria`.
+   *Exemplo*: Clique com o botão direito em `fotos`, escolha "New Folder" (Nova Pasta) e digite `maria`.
 3. Dentro da pasta `maria`, coloque **duas fotos principais**:
    - A foto de capa do topo. Exemplo: `hero.jpg`.
    - A foto redonda de perfil. Exemplo: `profile.jpg`.
@@ -22,7 +22,7 @@ Antes de mexer no código, precisamos colocar as fotos da pessoa no lugar certo.
 
 Sua pasta deve ficar assim:
 ```text
-src/assets/fotos/maria/
+public/fotos/maria/
 ├── hero.jpg             (Foto principal do topo)
 ├── profile.jpg          (Foto redonda)
 └── gallery/             (Pasta com o resto das fotos)
@@ -49,21 +49,14 @@ Agora vamos preencher os textos e configurar as fotos que colocamos no Passo 1.
 
 Leia os comentários dentro do arquivo, eles te guiarão. Basicamente você precisa:
 
-1. **Importar as fotos:** No início do arquivo, apague as barras `//` das 3 linhas de importação e troque a palavra `SLUG` pelo nome da pasta que você criou (ex: `maria`).
-   ```typescript
-   import heroImage from "@/assets/fotos/maria/hero.jpg";
-   import profilePhoto from "@/assets/fotos/maria/profile.jpg";
-   import foto1 from "@/assets/fotos/maria/gallery/foto1.jpg";
-   // Importe as outras fotos da galeria aqui copiando a linha de cima...
-   ```
-
-2. **Preencher os textos:**
+1. **Preencher os textos:**
    - Na linha `slug: "SLUG",` troque pela URL que você quer. Ex: `slug: "maria",`.
    - Preencha `nome_completo`, `data_nascimento`, `texto_biografico`, etc., entre as aspas.
+   - Preencha os caminhos das imagens (`heroImage` e `profilePhoto`) com os caminhos diretos. Ex: `heroImage: "/fotos/maria/hero.jpg"`.
 
-3. **Preencher os arrays (listas):**
-   - Na **galeria**, para cada foto que você importou lá em cima, adicione uma linha:
-     `{ tipo: "foto", url: foto1, legenda: "Foto do sorvete" },`
+2. **Preencher os arrays (listas):**
+   - Na **galeria**, para cada foto que você adicionou, adicione uma linha:
+     `{ tipo: "foto", url: "/fotos/maria/gallery/foto1.jpg", legenda: "Foto do sorvete" },`
    - Preencha os hábitos, timeline e árvore genealógica seguindo o modelo que já está lá. Se não quiser alguma dessas abas, é só deixar a lista vazia: `[]`.
 
 **Não esqueça de salvar o arquivo (Ctrl + S)!**
@@ -98,6 +91,6 @@ O site ainda não sabe que o arquivo `maria.ts` existe. Vamos avisá-lo.
 
 Tudo pronto! Se você rodar o seu site (`npm run dev`), você poderá acessar a página do novo memorial digitando a URL com o **slug** que você colocou no arquivo `index.ts`.
 
-*Exemplo:* `http://localhost:8082/memoriais/maria`
+*Exemplo:* `http://localhost:8080/memorial/maria`
 
 A página já vai estar com o layout perfeito, cores, botões e dividores, tudo puxando os dados que você digitou de forma automática!

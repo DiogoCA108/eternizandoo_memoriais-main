@@ -1,5 +1,5 @@
 import { AnimatedSection } from "./AnimatedSection";
-import { User, Heart, Users, GitBranch, Cross } from "lucide-react";
+import { User, Heart, Users, Network, Cross } from "lucide-react";
 
 interface FamilyMember {
   nome: string;
@@ -23,7 +23,7 @@ export const FamilyTreeSection = ({ membros }: FamilyTreeSectionProps) => {
       <div className="memorial-container">
         <AnimatedSection>
           <div className="flex justify-center mb-3">
-            <GitBranch className="w-7 h-7 text-primary/60" />
+            <Network className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
             Raízes de amor
@@ -44,7 +44,7 @@ export const FamilyTreeSection = ({ membros }: FamilyTreeSectionProps) => {
           {/* Memorial person + Spouse */}
           <AnimatedSection delay={0.15}>
             <div className="flex justify-center items-center gap-6 my-2">
-              <div className="text-center p-5 bg-background rounded-xl border-2 border-primary/20 shadow-lg shadow-foreground/5">
+              <div className="flex-1 min-w-[180px] max-w-[220px] text-center p-5 bg-background rounded-xl border-2 border-primary/20 shadow-lg shadow-foreground/5">
                 <div className="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-3">
                   <span className="text-primary-foreground font-display text-lg">MH</span>
                 </div>
@@ -61,7 +61,7 @@ export const FamilyTreeSection = ({ membros }: FamilyTreeSectionProps) => {
                     <Heart className="w-4 h-4 text-primary/50" />
                     <div className="w-8 h-px bg-primary/30" />
                   </div>
-                  <div className="text-center p-4">
+                  <div className="flex-1 min-w-[150px] max-w-[200px] text-center p-4 bg-background rounded-xl border-2 border-primary/10 shadow-md shadow-foreground/5">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                       <Heart className="w-7 h-7 text-primary" />
                     </div>

@@ -12,14 +12,13 @@ import { LocationSection } from "@/components/LocationSection";
 import { FooterSection } from "@/components/FooterSection";
 import { SectionDivider } from "@/components/SectionDivider";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { Cross } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <MemorialNav />
 
-      {/* Hero + divider at end */}
+      {/* Hero */}
       <div>
         <HeroSection
           heroImage={memoriais["joao"].heroImage}
@@ -29,7 +28,6 @@ const Index = () => {
           falecimento={memoriais["joao"].data_falecimento}
           frase={memoriais["joao"].frase_homenagem}
         />
-        <SectionDivider />
       </div>
 
       {/* bg-card (light) - Biografia + divider */}
@@ -85,8 +83,12 @@ const Index = () => {
 
       {/* Family Dedication */}
       <AnimatedSection>
-        <div className="py-16 text-center bg-background">
-          <Cross className="w-5 h-5 text-primary/40 mx-auto mb-4" />
+        <div className="py-12 text-center bg-background">
+          <div className="flex justify-center gap-3 text-[#B07A2C]/90 text-[19px] mb-2">
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+          </div>
           <p className="font-display text-xl md:text-2xl text-foreground/70 italic">
             Com amor eterno, a família Silva
           </p>

@@ -1,20 +1,25 @@
 import type { MemorialData } from "./types";
 
-// 1. Copie este arquivo e renomeie para o slug do memorial (ex: maria.ts)
-// 2. Crie a pasta src/assets/fotos/SLUG/ e coloque as fotos
-// 3. Substitua 'SLUG' abaixo pelo nome real da pasta
-// 4. Adicione o import no arquivo src/data/fotos/index.ts
-
-// IMPORTANTE: Descomente os imports de imagem abaixo e atualize os caminhos!
-// import heroImage from "@/assets/fotos/maria/hero.png";
-// import profilePhoto from "@/assets/fotos/maria/profile.png";
-// import foto1 from "@/assets/fotos/maria/gallery/foto1.png";
+// Memorial: Maria Mendonça
+// Fotos em: public/fotos/maria/
 
 export const mariaData: MemorialData = {
     slug: "maria",
 
+    // --- CONFIGURAÇÃO DE EXIBIÇÃO ---
+    // Mude para false qualquer seção que você queira ocultar deste memorial
+    secoes_ativas: {
+        biografia: true,
+        habitos: true,
+        galeria: false,   // Exemplo: Ocultando a Galeria
+        musicas: false,   // Exemplo: Ocultando as Músicas
+        arvore_genealogica: true,
+        linha_tempo: true,
+        homenagens: true,
+        localizacao: true,
+    },
+
     // --- IMAGENS PRINCIPAIS ---
-    // Troque as strings abaixo pelas variáveis importadas acima
     heroImage: "/fotos/maria/hero.png",
     profilePhoto: "/fotos/maria/profile.png",
 
@@ -101,6 +106,7 @@ Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com
         endereco: "Cemitério da Consolação, Rua da Consolação, 1660 - São Paulo, SP",
         horario_visita: "Segunda a Domingo, das 7h às 18h",
         link_maps: "https://maps.google.com/?q=Cemitério+da+Consolação+São+Paulo",
-        foto_url: "",
+        query_mapa: "Cemitério da Consolação, São Paulo",// Aqui pode se digitado Latitude e Longitude "-23.5489, -46.6521". Ajusta a precisão do iframe sem mudar o texto do endereço
+        foto_url: "/fotos/maria/tumulo.png",
     },
 };

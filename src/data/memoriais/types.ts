@@ -1,6 +1,18 @@
 export interface MemorialData {
     slug: string;
 
+    // Configuração opcional de quais seções exibir (se omitido, o padrão é exibir o que tem dados)
+    secoes_ativas?: {
+        biografia?: boolean;
+        habitos?: boolean;
+        galeria?: boolean;
+        musicas?: boolean;
+        arvore_genealogica?: boolean;
+        linha_tempo?: boolean;
+        homenagens?: boolean;
+        localizacao?: boolean;
+    };
+
     // Imagens principais
     heroImage: string;
     profilePhoto: string;
@@ -29,5 +41,6 @@ export interface MemorialData {
         horario_visita: string;
         link_maps: string;
         foto_url: string;
+        query_mapa?: string;
     };
 }

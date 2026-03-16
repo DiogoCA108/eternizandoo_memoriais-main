@@ -1,6 +1,6 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { useState } from "react";
-import { MessageCircle, X, Heart } from "lucide-react";
+import { MessageCircle, X, MessageCircleHeart } from "lucide-react";
 
 interface Homenagem {
   nome: string;
@@ -32,10 +32,10 @@ export const TributesSection = ({ homenagens }: TributesSectionProps) => {
       <div className="memorial-container">
         <AnimatedSection>
           <div className="flex justify-center mb-3">
-            <Heart className="w-7 h-7 text-primary/60" />
+            <MessageCircleHeart className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Palavras de amor
+            Palavras de carinho
           </p>
           <h2 className="section-title">Mensagens e Homenagens</h2>
           <div className="section-divider" />
