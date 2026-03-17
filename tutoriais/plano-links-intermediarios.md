@@ -21,8 +21,10 @@ Criar um sistema de **link intermediário curto** para uso em QR Codes:
 ```
 
 ### Regras do código curto
-- 6 caracteres alfanuméricos
-- Case sensitive (A-Z, a-z, 0-9)
+- 6 caracteres
+- **Case-insensitive:** Utiliza apenas letras minúsculas (e números).
+- **Alfabeto seguro (human-friendly):** Utiliza a string de caracteres "abcdefghjkmnpqrstuvwxyz23456789".
+- **Sem confusão visual:** Os caracteres ambíguos `o`, `0`, `l`, `1` e `i` foram removidos para garantir que quem for ler e digitar o código manualmente não cometa erros.
 - Gerado automaticamente ao criar um memorial
 
 ### Vantagens
@@ -34,8 +36,8 @@ Criar um sistema de **link intermediário curto** para uso em QR Codes:
 
 ## 3. Estratégia de Geração de Códigos Únicos
 
-- Pool de caracteres: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`
-- Gerar 6 caracteres aleatórios (62⁶ = ~56 bilhões de combinações)
+- Pool de caracteres: `abcdefghjkmnpqrstuvwxyz23456789` (31 caracteres no total)
+- Gerar 6 caracteres aleatórios (31⁶ = ~887 milhões de combinações)
 - Verificar unicidade contra o arquivo de mapeamento existente antes de salvar
 
 ---
@@ -50,6 +52,8 @@ export const shortlinks: Record<string, string> = {
   "Z1x7Lm": "maria-souza-05-08-2023",
 };
 ```
+
+*Nota sobre automação*: O código `"7r26gz"` que será colocado na URL intermediária será extraído do próprio nome técnico do arquivo/pasta, que agora segue o padrão `ID_MEMORIAL` (ex: `000001_josefo_7r26gz.ts`). Na hora de automatizar a criação futura, o sistema já extrairá os 6 últimos caracteres do ID para montar esse dicionário.
 
 ---
 

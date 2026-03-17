@@ -18,12 +18,13 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 const MemorialPage = () => {
     const { slug } = useParams();
 
-    // Se não passar slug ou o memorial não existir, redireciona para o 404
-    if (!slug || !memoriais[slug]) {
+    // Procura na lista de memoriais qual deles tem a propriedade 'slug' igual à URL atual
+    const data = Object.values(memoriais).find(m => m?.slug === slug);
+
+    // Se não passar slug ou o memorial não for encontrado, redireciona para o 404
+    if (!slug || !data) {
         return <Navigate to="/404" replace />;
     }
-
-    const data = memoriais[slug];
 
     // Helper para verificar se a seção deve ser exibida (True por padrão se não configurado)
     const isAtivo = (secao: keyof NonNullable<MemorialData['secoes_ativas']>) => {

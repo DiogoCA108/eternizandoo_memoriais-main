@@ -36,7 +36,7 @@ export const MemorialNav = () => {
           className="font-display text-sm transition-colors duration-300"
           style={{ color: hasScrolled ? "hsl(220, 30%, 15%)" : "hsla(40, 33%, 96%, 0.8)" }}
         >
-          Memorial Além do Tempo
+          Memorial Eterno
         </span>
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (

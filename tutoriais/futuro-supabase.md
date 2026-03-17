@@ -31,7 +31,7 @@ Quando ele seleciona as fotos, o site fará o envio automaticamente para a nuvem
 
 ### Passo 4: Salvar e Publicar
 Após preencher e revisar os dados, ele clicará em **"Salvar e Publicar"**.
-- O painel vai gerar o "slug" (o nome na URL) automaticamente. Se o nome for "Maria Mendonça", a URL será `/memoriais/maria-mendonca`.
+- O painel vai gerar o `ID_MEMORIAL` interno e a `URL_FINAL` (o nome na URL) automaticamente. Se o nome for "Josefo Martinez", a URL pública será `/memorial/{id}_josefo_{codigo}`.
 - Os dados de texto serão salvos no banco de dados (Supabase Database).
 - A página do memorial estará **imediatamente no ar**, sem precisar de um desenvolvedor ou de um `npm run build`.
 
@@ -67,3 +67,20 @@ O que precisará ser feito no nível de código:
 
 ### Resumo
 Toda a base técnica já está pronta. A estrutura de como a página "lê" a história de uma pessoa já foi programada de forma inteligente. O único passo que falta é trocar o lugar onde essas histórias estão guardadas: tirar da "pasta do seu computador" e colocar "nas nuvens" do Supabase!
+
+---
+
+## Parte 3: Como resolveremos o peso no futuro? (Visão de Escala)
+
+Este sistema de arquivos baseados em TypeScript é o nosso **MVP (Produto Mínimo Viável)** criado para lançar o negócio rapidamente, de forma simples e de graça.
+
+Quando você bater a marca de uns 100 ou 200 clientes (o que já te dará um faturamento legal), o passo arquitetural correto é:
+
+1. Apagar todos os arquivos `.ts` da pasta de memoriais do projeto.
+2. Subir esses dados para as tabelas do Supabase (Banco de Dados).
+3. A página `MemorialPage` deixará de ler as coisas do arquivo `index.ts` estático e passará a fazer uma requisição na internet: *"Supabase, me mande apenas as informações do slug 'nome-da-pessoa'"*.
+4. O Supabase processará isso em milissegundos e enviará pelo ar apenas os textos daquele memorial específico, mantendo o site leve e pesando quase nada!
+
+**Resumo da Ópera**: A arquitetura que construímos (onde a página procura os dados) é perfeita e super rápida para a nossa Fase 1 (MVP estático). Vai rodar liso para as primeiras dezenas ou centenas de memoriais.
+
+Quando chegar o momento em que isso começar a pesar (porque o usuário teria que baixar os textos de 10 mil clientes de uma vez só no `index.ts`), não será um problema de performance de busca, e sim de peso de download. Nesse exato momento, faremos a chave virar para o Supabase conforme planejado!

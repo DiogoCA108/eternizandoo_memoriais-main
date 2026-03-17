@@ -1,18 +1,26 @@
 import type { MemorialData } from "./types";
 
-// Memorial: Maria Mendonça
-// Fotos em: public/fotos/maria/
+// 1. Copie este arquivo e renomeie para o ID_MEMORIAL (ex: 000001_josefo_7r26gz.ts)
+// 2. Crie a pasta public/fotos/ID_MEMORIAL/ e coloque as fotos lá
+// 3. Substitua 'URL_FINAL' e 'ID_MEMORIAL' no objeto abaixo pelos valores reais
+// 4. Adicione o import no arquivo src/data/memoriais/index.ts
+// 5. Use caminhos diretos apontando para public/fotos/ID_MEMORIAL/ na seção de imagens
 
-export const mariaData: MemorialData = {
-    slug: "maria",
+// IMPORTANTE: Em TypeScript, o nome de uma variável não pode começar com número!
+// Se o seu ID começar com número (ex: 000001), você PRECISA colocar um underline (_)
+// na frente do nome da constante abaixo e também na hora de importá-la no index.ts.
 
-    // --- CONFIGURAÇÃO DE EXIBIÇÃO ---
-    // Mude para false qualquer seção que você queira ocultar deste memorial
+export const _000001_josefo_7r26gz: MemorialData = {
+    // --- ROTA DO SITE ---
+    // Substitua URL_FINAL pela rota desejada no navegador (ex: josefo-martinez-13-03-2002)
+    slug: "josefo-martinez-13-03-2002",
+
+    // Configuração de exibição das seções (opcional - por padrão todas que tiverem dados são exibidas)
     secoes_ativas: {
         biografia: true,
         habitos: true,
-        galeria: true,   // Exemplo: Ocultando a Galeria
-        musicas: true,   // Exemplo: Ocultando as Músicas
+        galeria: true,
+        musicas: true,
         arvore_genealogica: true,
         linha_tempo: true,
         homenagens: true,
@@ -20,52 +28,47 @@ export const mariaData: MemorialData = {
     },
 
     // --- IMAGENS PRINCIPAIS ---
-    heroImage: "/fotos/maria/hero.png",
-    profilePhoto: "/fotos/maria/profile.png",
+    // Substitua ID_MEMORIAL pelo nome da pasta (ex: 000001_josefo_7r26gz)
+    // Observe a extensão do arquivo (jpg, png, webp)
+    heroImage: "/fotos/000001_josefo_7r26gz/hero.png",
+    profilePhoto: "/fotos/000001_josefo_7r26gz/profile.png",
 
     // --- DADOS BÁSICOS ---
-    nome_completo: "Maria MENDONÇA",
-    data_nascimento: "1995-06-22",
-    data_falecimento: "2021-11-05",
+    nome_completo: "Josefo Matinez ",
+    data_nascimento: "01-01-1930",
+    data_falecimento: "13-03-2002",
     frase_homenagem: "Frase marcante ou dedicatória curta.",
 
     // --- TEXTOS DA PÁGINA (OPCIONAIS) ---
     // Remova ou deixe em branco para usar o padrão
     biografia_titulo: "História de Vida",
     biografia_subtitulo: "Uma vida de amor e dedicação",
-    dedicatoria: "Com amor eterno, a família Mendonça",
+    dedicatoria: "Com amor eterno, a família",
 
     // --- CONTEÚDO ---
-    texto_biografico: `Maria Mendonça da Silva nasceu em 15 de março de 1942, em uma pequena cidade do interior de Minas Gerais, filha de José Antônio e Dona Conceição. Cresceu cercada pelo aroma do café fresco e pelo som das cigarras nas tardes quentes.
-
-Desde jovem, Maria Helena demonstrou uma generosidade extraordinária. Aos 18 anos, mudou-se para São Paulo, onde conheceu o amor de sua vida, Antônio Carlos. Casaram-se em 1963, na pequena igreja de São José, numa cerimônia simples, mas repleta de emoção.
-
-Dedicou sua vida à família, criando seus três filhos — Paulo, Ana e Roberto — com amor incondicional, sabedoria e firmeza. Era conhecida por suas receitas inigualáveis, especialmente o bolo de fubá que perfumava toda a vizinhança aos domingos.
-
-Professora por vocação, lecionou durante 30 anos na Escola Estadual Dom Pedro II, onde tocou a vida de centenas de alunos. Muitos ainda a lembram como "Dona Helena", a professora que acreditava no potencial de cada criança.
-
-Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com carinho. Partiu serenamente, cercada pelo amor de sua família, deixando um legado de bondade, fé e esperança.`,
+    texto_biografico: `Escreva a biografia aqui.
+  
+    Pode ter múltiplos parágrafos separados por quebra de linha dupla.`,
 
     habitos: [
-        { tipo: "bebida", descricao: "Pitú" },
-        { tipo: "comida", descricao: "Cuscuz com ovos" },
-        { tipo: "habito", descricao: "Sorrir" },
-        { tipo: "frase", descricao: '"Vamos chamegar"' },
+        { tipo: "bebida", descricao: "Bebida favorita" },
+        { tipo: "comida", descricao: "Prato favorito" },
+        { tipo: "habito", descricao: "Costume diário" },
+        { tipo: "frase", descricao: '"Frase famosa da pessoa"' },
     ],
 
+    // Observe a extensão do arquivo (jpg, png, webp)
     galeria: [
-        { tipo: "foto", url: "/fotos/maria/gallery/foto1.png", legenda: "Legenda da foto 1" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto2.png", legenda: "Legenda da foto 2" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto3.png", legenda: "Legenda da foto 3" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto4.png", legenda: "Legenda da foto 4" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto5.png", legenda: "Legenda da foto 5" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto6.png", legenda: "Legenda da foto 6" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto7.png", legenda: "Legenda da foto 7" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto8.png", legenda: "Legenda da foto 8" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto9.png", legenda: "Legenda da foto 9" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto10.png", legenda: "Legenda da foto 10" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto11.png", legenda: "Legenda da foto 11" },
-        { tipo: "foto", url: "/fotos/maria/gallery/foto12.png", legenda: "Legenda da foto 12" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto1.png", legenda: "Legenda da foto 1" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto2.png", legenda: "Legenda da foto 2" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto3.png", legenda: "Legenda da foto 3" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto4.png", legenda: "Legenda da foto 4" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto5.png", legenda: "Legenda da foto 5" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto6.png", legenda: "Legenda da foto 6" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto7.png", legenda: "Legenda da foto 7" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto8.png", legenda: "Legenda da foto 8" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto9.png", legenda: "Legenda da foto 9" },
+        { tipo: "foto", url: "/fotos/000001_josefo_7r26gz/gallery/foto10.png", legenda: "Legenda da foto 10" },
     ],
 
     musicas: [
@@ -102,11 +105,12 @@ Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com
         { nome: "Ana Carolina", vinculo: "Filha", mensagem: "Mãe, sua força e sua fé me guiaram por toda a vida. Obrigada por ser o meu porto seguro. Te amo para sempre.", data: "2024-08-27" },
     ],
 
+    // Observe a extensão do arquivo (jpg, png, webp)
     localizacao_tumulo: {
         endereco: "Cemitério da Consolação, Rua da Consolação, 1660 - São Paulo, SP",
         horario_visita: "Segunda a Domingo, das 7h às 18h",
         link_maps: "https://maps.google.com/?q=Cemitério+da+Consolação+São+Paulo",
-        query_mapa: "Cemitério da Consolação, São Paulo",// Aqui pode se digitado Latitude e Longitude "-23.5489, -46.6521". Ajusta a precisão do iframe sem mudar o texto do endereço
-        foto_url: "/fotos/maria/tumulo.png",
+        query_mapa: "", // Termo de busca exato ou coordenadas lat,long para o mapa (opcional)
+        foto_url: "/fotos/000001_josefo_7r26gz/tumulo.png", // Opcional (/fotos/ID_MEMORIAL/tumulo.jpg)
     },
 };

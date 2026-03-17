@@ -1,14 +1,19 @@
 import type { MemorialData } from "./types";
 
-// 1. Copie este arquivo e renomeie para o slug do memorial (ex: maria.ts)
-// 2. Crie a pasta public/fotos/SLUG/ e coloque as fotos
-// 3. Substitua 'SLUG' abaixo pelo nome real da pasta
+// 1. Copie este arquivo e renomeie para o ID_MEMORIAL (ex: 000001_josefo_7r26gz.ts)
+// 2. Crie a pasta public/fotos/ID_MEMORIAL/ e coloque as fotos lá
+// 3. Substitua 'URL_FINAL' e 'ID_MEMORIAL' no objeto abaixo pelos valores reais
 // 4. Adicione o import no arquivo src/data/memoriais/index.ts
+// 5. Use caminhos diretos apontando para public/fotos/ID_MEMORIAL/ na seção de imagens
 
-// Use caminhos diretos apontando para public/fotos/SLUG/ na seção de imagens
+// IMPORTANTE: Em TypeScript, o nome de uma variável não pode começar com número!
+// Se o seu ID começar com número (ex: 000001), você PRECISA colocar um underline (_)
+// na frente do nome da constante abaixo e também na hora de importá-la no index.ts.
 
-export const memorialData: MemorialData = {
-    slug: "SLUG",
+export const _ID_MEMORIAL: MemorialData = {
+    // --- ROTA DO SITE ---
+    // Substitua URL_FINAL pela rota desejada no navegador (ex: josefo-martinez-13-03-2002)
+    slug: "URL_FINAL",
 
     // Configuração de exibição das seções (opcional - por padrão todas que tiverem dados são exibidas)
     secoes_ativas: {
@@ -23,8 +28,10 @@ export const memorialData: MemorialData = {
     },
 
     // --- IMAGENS PRINCIPAIS ---
-    heroImage: "/fotos/SLUG/hero.jpg",
-    profilePhoto: "/fotos/SLUG/profile.jpg",
+    // Substitua ID_MEMORIAL pelo nome da pasta (ex: 000001_josefo_7r26gz)
+    // Observe a extensão do arquivo (jpg, png, webp)
+    heroImage: "/fotos/ID_MEMORIAL/hero.jpg",
+    profilePhoto: "/fotos/ID_MEMORIAL/profile.jpg",
 
     // --- DADOS BÁSICOS ---
     nome_completo: "Nome Completo",
@@ -50,8 +57,9 @@ Pode ter múltiplos parágrafos separados por quebra de linha dupla.`,
         { tipo: "frase", descricao: '"Frase famosa da pessoa"' },
     ],
 
+    // Observe a extensão do arquivo (jpg, png, webp)
     galeria: [
-        // { tipo: "foto", url: foto1, legenda: "Legenda da foto 1" },
+        // { tipo: "foto", url: "/fotos/ID_MEMORIAL/gallery/foto1.jpg", legenda: "Legenda da foto 1" },
     ],
 
     musicas: [
@@ -73,11 +81,12 @@ Pode ter múltiplos parágrafos separados por quebra de linha dupla.`,
         { nome: "Nome Autor", vinculo: "Relação", mensagem: "Mensagem de carinho...", data: "2024-01-01" },
     ],
 
+    // Observe a extensão do arquivo (jpg, png, webp)
     localizacao_tumulo: {
         endereco: "Endereço completo",
         horario_visita: "Segunda a Domingo, das 7h às 18h",
         link_maps: "URL do Google Maps",
         query_mapa: "", // Termo de busca exato ou coordenadas lat,long para o mapa (opcional)
-        foto_url: "", // Opcional
+        foto_url: "", // Opcional (/fotos/ID_MEMORIAL/tumulo.jpg)
     },
 };
