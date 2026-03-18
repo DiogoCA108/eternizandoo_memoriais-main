@@ -34,7 +34,7 @@ export const HeroSection = ({
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-x-hidden py-16">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-x-hidden py-6">
       {/* Background */}
       <div className="absolute inset-0">
         <img
