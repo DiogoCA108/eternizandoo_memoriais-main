@@ -2,28 +2,131 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
-    --background: 40 33% 96%; --foreground: 220 30% 15%; --card: 40 30% 98%; --card-foreground: 220 30% 15%; --popover: 40 30% 98%; --popover-foreground: 220 30% 15%; --primary: 36 60% 42%; --primary-foreground: 40 33% 96%; --secondary: 40 20% 90%; --secondary-foreground: 220 30% 20%; --muted: 40 15% 92%; --muted-foreground: 220 10% 45%; --accent: 36 45% 50%; --accent-foreground: 40 33% 96%; --destructive: 0 84.2% 60.2%; --destructive-foreground: 210 40% 98%; --border: 36 20% 85%; --input: 36 20% 85%; --ring: 36 60% 42%; --radius: 0.5rem; --gold: 36 60% 42%; --gold-light: 40 50% 75%; --gold-glow: 36 70% 55%; --cream: 40 33% 96%; --cream-dark: 40 20% 90%; --navy: 220 30% 15%; --navy-light: 220 20% 30%; --sage: 140 15% 55%; --font-display: 'Playfair Display', serif; --font-body: 'Lora', serif;
+    --background: 40 33% 96%;
+    --foreground: 220 30% 15%;
+    --card: 40 30% 98%;
+    --card-foreground: 220 30% 15%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 220 30% 15%;
+    --primary: 36 60% 42%;
+    --primary-foreground: 40 33% 96%;
+    --secondary: 40 20% 90%;
+    --secondary-foreground: 220 30% 20%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 36 45% 50%;
+    --accent-foreground: 40 33% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 36 20% 85%;
+    --input: 36 20% 85%;
+    --ring: 36 60% 42%;
+    --radius: 0.5rem;
+    --gold: 36 60% 42%;
+    --gold-light: 40 50% 75%;
+    --gold-glow: 36 70% 55%;
+    --cream: 40 33% 96%;
+    --cream-dark: 40 20% 90%;
+    --navy: 220 30% 15%;
+    --navy-light: 220 20% 30%;
+    --sage: 140 15% 55%;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Lora', serif;
   }
-  * { @apply border-border; }
-  body { @apply bg-background text-foreground; font-family: var(--font-body); }
-  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
 }
+
 @layer components {
-  .memorial-section { @apply py-8 md:py-10 px-4; }
-  .memorial-container { @apply max-w-4xl mx-auto; }
-  .section-title { font-family: var(--font-display); @apply text-3xl md:text-4xl font-semibold text-foreground mb-2 text-center; }
-  .section-divider { @apply w-16 h-[1.5px] mx-auto my-6; background: linear-gradient(90deg, transparent, hsl(var(--accent)), transparent); }
-  .gold-gradient { background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow))); }
+  .memorial-section {
+    @apply py-8 md:py-10 px-4;
+  }
+
+  .memorial-container {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl font-semibold text-foreground mb-2 text-center;
+  }
+
+  .section-divider {
+    @apply w-16 h-[1.5px] mx-auto my-6;
+    background: linear-gradient(90deg, transparent, hsl(var(--accent)), transparent);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
+  }
 }
+
 @layer utilities {
-  .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
-  .animate-scale-in { animation: scaleIn 0.5s ease-out forwards; }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
 }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-html { scroll-behavior: smooth; }
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: hsl(var(--cream)); }
-::-webkit-scrollbar-thumb { background: hsl(var(--gold-light)); border-radius: 3px; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--cream));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--gold-light));
+  border-radius: 3px;
+}
