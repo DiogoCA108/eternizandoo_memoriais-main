@@ -20,7 +20,7 @@ export const _ID_MEMORIAL: MemorialData = {
         biografia: true,
         habitos: true,
         galeria: true,
-        musicas: true,
+        musicas: false,
         arvore_genealogica: true,
         linha_tempo: true,
         homenagens: true,
