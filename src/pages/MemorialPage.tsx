@@ -93,7 +93,7 @@ const MemorialPage = () => {
             {/* bg-card (light) - Árvore + divider */}
             {isAtivo('arvore_genealogica') && data.arvore_genealogica.length > 0 && (
                 <div className="bg-card">
-                    <FamilyTreeSection membros={data.arvore_genealogica} />
+                    <FamilyTreeSection membros={data.arvore_genealogica} nomeMemorial={data.nome_completo} generoMemorial={data.genero} />
                     <SectionDivider />
                 </div>
             )}

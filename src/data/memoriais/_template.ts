@@ -33,8 +33,9 @@ export const _ID_MEMORIAL: MemorialData = {
     heroImage: "/fotos/ID_MEMORIAL/hero.jpg",
     profilePhoto: "/fotos/ID_MEMORIAL/profile.jpg",
 
-    // --- DADOS BÁSICOS ---
+    // --- DADOS BÁSICS ---
     nome_completo: "Nome Completo",
+    genero: "F", // "M" para Homem, "F" para Mulher
     data_nascimento: "1900-01-01",
     data_falecimento: "2000-12-31",
     frase_homenagem: "Frase marcante ou dedicatória curta.",
@@ -70,7 +71,9 @@ Pode ter múltiplos parágrafos separados por quebra de linha dupla.`,
         { nome: "Nome", relacao: "pai" },
         { nome: "Nome", relacao: "mae" },
         { nome: "Nome", relacao: "conjuge" },
-        { nome: "Nome", relacao: "filho" },
+        { nome: "Nome Filho Misto", relacao: "filho", parentesco: "ambos" }, // Geração de ambos (padrão)
+        { nome: "Nome Filho 1", relacao: "filho", parentesco: "memorial" }, // Geração direta do Memorial
+        { nome: "Nome Filho 2", relacao: "filho", parentesco: "conjuge" }, // Geração do cônjuge apenas
     ],
 
     linha_tempo: [

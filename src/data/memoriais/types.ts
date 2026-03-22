@@ -19,6 +19,7 @@ export interface MemorialData {
 
     // Dados básicos
     nome_completo: string;
+    genero?: "M" | "F";
     data_nascimento: string;
     data_falecimento: string;
     frase_homenagem: string;
@@ -33,7 +34,7 @@ export interface MemorialData {
     habitos: Array<{ tipo: string; descricao: string }>;
     galeria: Array<{ tipo: "foto" | "video"; url: string; legenda: string }>;
     musicas: Array<{ titulo: string; url_player: string }>;
-    arvore_genealogica: Array<{ nome: string; relacao: string }>;
+    arvore_genealogica: Array<{ nome: string; relacao: string; parentesco?: "memorial" | "conjuge" | "ambos" }>;
     linha_tempo: Array<{ titulo_evento: string; data_evento: string; descricao: string; ordem: number }>;
     homenagens: Array<{ nome: string; vinculo: string; mensagem: string; data: string }>;
     localizacao_tumulo: {

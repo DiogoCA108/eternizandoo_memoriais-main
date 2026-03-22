@@ -60,7 +60,7 @@ const Index = () => {
 
       {/* bg-card (light) - Árvore + divider */}
       <div className="bg-card">
-        <FamilyTreeSection membros={memoriais["joao"].arvore_genealogica} />
+        <FamilyTreeSection membros={memoriais["joao"].arvore_genealogica} nomeMemorial={memoriais["joao"].nome_completo} generoMemorial={memoriais["joao"].genero} />
         <SectionDivider />
       </div>
 
