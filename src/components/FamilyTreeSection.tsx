@@ -13,10 +13,14 @@ interface FamilyTreeSectionProps {
   generoMemorial?: "M" | "F";
 }
 
-const groupConfig = [
-  { key: "pais", label: "Pais", icon: User, filter: (m: FamilyMember) => m.relacao === "pai" || m.relacao === "mae" },
-  { key: "filhos", label: "Filhos", icon: Users, filter: (m: FamilyMember) => m.relacao === "filho" },
-];
+const groupConfigs = {
+  avos: { key: "avos", label: "Avós", icon: User, filter: (m: FamilyMember) => m.relacao.toLowerCase().includes("avô") || m.relacao.toLowerCase().includes("avó") || m.relacao.toLowerCase().includes("avo") },
+  pais: { key: "pais", label: "Pais", icon: User, filter: (m: FamilyMember) => m.relacao === "pai" || m.relacao === "mae" || m.relacao === "mãe" },
+  irmaos: { key: "irmaos", label: "Irmãos", icon: Users, filter: (m: FamilyMember) => m.relacao === "irmão" || m.relacao === "irmã" || m.relacao === "irmao" || m.relacao === "irma" },
+  filhos: { key: "filhos", label: "Filhos", icon: Users, filter: (m: FamilyMember) => m.relacao === "filho" || m.relacao === "filha" },
+  netos: { key: "netos", label: "Netos", icon: Users, filter: (m: FamilyMember) => m.relacao === "neto" || m.relacao === "neta" },
+  bisnetos: { key: "bisnetos", label: "Bisnetos", icon: Users, filter: (m: FamilyMember) => m.relacao === "bisneto" || m.relacao === "bisneta" },
+};
 
 const getInitials = (name: string) => {
   if (!name) return "M";
@@ -32,7 +36,7 @@ const getFirstName = (name: string) => {
 };
 
 export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", generoMemorial = "F" }: FamilyTreeSectionProps) => {
-  const conjuge = membros.find((m) => m.relacao === "conjuge");
+  const conjuge = membros.find((m) => m.relacao.toLowerCase() === "conjuge" || m.relacao.toLowerCase() === "cônjuge");
 
   // Se o memorial for de um homem, a cor da linhagem dele é Azul e o da esposa é Dourado
   const isMemorialMan = generoMemorial === "M";
@@ -43,7 +47,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
   const memorialCardColorClass = isMemorialMan ? "from-navy to-[#253954] shadow-navy/30" : "gold-gradient shadow-[0_0_15px_rgba(180,150,80,0.3)]";
 
   const getHeritageVisuals = (m: FamilyMember) => {
-    if (m.relacao !== "filho") {
+    if (!m.parentesco) {
       return { bg: "bg-primary/10 border-primary/30 group-hover:bg-primary/20", icon: "text-primary/80 group-hover:text-primary", badge: null };
     }
 
@@ -90,13 +94,18 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
         </AnimatedSection>
 
         <div className="mt-8 md:mt-12 max-w-2xl mx-auto px-2">
-          {/* Parents group */}
-          {renderGroup(membros, groupConfig[0], 0, getHeritageVisuals)}
-
-          {/* Connector */}
-          <div className="flex justify-center">
-            <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-primary/20 via-primary/60 to-transparent" />
-          </div>
+          {/* Pre-memorial groups */}
+          {[groupConfigs.avos, groupConfigs.pais, groupConfigs.irmaos].map((config) => {
+            if (!membros.some(config.filter)) return null;
+            return (
+              <div key={config.key}>
+                {renderGroup(membros, config, 0, getHeritageVisuals)}
+                <div className="flex justify-center">
+                  <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-primary/20 via-primary/60 to-transparent" />
+                </div>
+              </div>
+            );
+          })}
 
           {/* Memorial person + Spouse */}
           <AnimatedSection delay={0.15}>
@@ -138,13 +147,18 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
             </div>
           </AnimatedSection>
 
-          {/* Connector */}
-          <div className="flex justify-center">
-            <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-primary/60 to-primary/20" />
-          </div>
-
-          {/* Children group */}
-          {renderGroup(membros, groupConfig[1], 0.2, getHeritageVisuals)}
+          {/* Post-memorial groups */}
+          {[groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos].map((config, idx) => {
+            if (!membros.some(config.filter)) return null;
+            return (
+              <div key={config.key}>
+                <div className="flex justify-center">
+                  <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-primary/60 to-primary/20" />
+                </div>
+                {renderGroup(membros, config, 0.2 + idx * 0.1, getHeritageVisuals)}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -153,7 +167,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
 
 function renderGroup(
   membros: FamilyMember[],
-  config: typeof groupConfig[number],
+  config: { key: string; label: string; icon: any; filter: (m: FamilyMember) => boolean },
   baseDelay: number,
   getHeritageVisuals: (m: FamilyMember) => any
 ) {

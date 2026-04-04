@@ -5,7 +5,7 @@ export const joaoData: MemorialData = {
     heroImage: "/fotos/joao/hero.jpg",
     profilePhoto: "/fotos/joao/profile.jpg",
 
-    nome_completo: "João Heleno da Silva",
+    nome_completo: "Maria Helena da Silva",
     data_nascimento: "1942-03-15",
     data_falecimento: "2024-08-22",
     frase_homenagem: "Seu amor iluminou cada vida que tocou, e sua luz permanecerá eternamente em nossos corações.",
@@ -14,7 +14,7 @@ export const joaoData: MemorialData = {
     biografia_subtitulo: "Uma vida de amor",
     dedicatoria: "Com amor eterno, a família Silva",
 
-    texto_biografico: `João Heleno da Silva nasceu em 15 de março de 1942, em uma pequena cidade do interior de Minas Gerais, filha de José Antônio e Dona Conceição. Cresceu cercada pelo aroma do café fresco e pelo som das cigarras nas tardes quentes.
+    texto_biografico: `Maria Helena da Silva nasceu em 15 de março de 1942, em uma pequena cidade do interior de Minas Gerais, filha de José Antônio e Dona Conceição. Cresceu cercada pelo aroma do café fresco e pelo som das cigarras nas tardes quentes.
 
 Desde jovem, Maria Helena demonstrou uma generosidade extraordinária. Aos 18 anos, mudou-se para São Paulo, onde conheceu o amor de sua vida, Antônio Carlos. Casaram-se em 1963, na pequena igreja de São José, numa cerimônia simples, mas repleta de emoção.
 
@@ -39,7 +39,7 @@ Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com
     ],
 
     galeria: [
-        { tipo: "foto", url: "/fotos/joao/gallery/foto-casamento-1963.jpg", legenda: "Casamento, 1900" },
+        { tipo: "foto", url: "/fotos/joao/gallery/foto-casamento-1963.jpg", legenda: "Casamento, 1963" },
         { tipo: "foto", url: "/fotos/joao/gallery/foto-filhos-1975.jpg", legenda: "Com os filhos, 1975" },
         { tipo: "foto", url: "/fotos/joao/gallery/foto-formatura.jpg", legenda: "Formatura como professora" },
         { tipo: "foto", url: "/fotos/joao/gallery/foto-natal-1990.jpg", legenda: "Natal em família, 1990" },
@@ -61,12 +61,18 @@ Nos últimos anos, dedicou-se aos netos, à igreja e ao jardim que cultivava com
     ],
 
     arvore_genealogica: [
-        { nome: "José Antônio da Silva", relacao: "pai" },
-        { nome: "Maria da Conceição", relacao: "mae" },
-        { nome: "Antônio Carlos da Silva", relacao: "conjuge" },
-        { nome: "Paulo Henrique da Silva", relacao: "filho" },
-        { nome: "Ana Carolina da Silva", relacao: "filho" },
-        { nome: "Roberto Carlos da Silva", relacao: "filho" },
+        { nome: "Joaquim da Silva", relacao: "avô paterno" },
+        { nome: "Benedita da Silva", relacao: "avó paterna" },
+        { nome: "José Antônio da Silva", relacao: "pai", parentesco: "memorial" },
+        { nome: "Maria da Conceição", relacao: "mãe", parentesco: "memorial" },
+
+        { nome: "Antônio Carlos da Silva", relacao: "cônjuge" },
+        { nome: "Paulo Henrique da Silva", relacao: "filho", parentesco: "ambos" },
+        { nome: "Ana Carolina da Silva", relacao: "filha", parentesco: "ambos" },
+        { nome: "Roberto Carlos da Silva", relacao: "filho", parentesco: "ambos" },
+        { nome: "Mariana Silva", relacao: "neta" },
+        { nome: "Lucas Silva", relacao: "neto" },
+        { nome: "Beatriz Silva", relacao: "neta" }
     ],
 
     linha_tempo: [

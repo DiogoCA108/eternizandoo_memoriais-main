@@ -31,7 +31,7 @@ export const BiographySection = ({
         <div className="mt-12 space-y-6">
           {paragraphs.map((p, i) => (
             <AnimatedSection key={i} delay={i * 0.1}>
-              <p className="text-foreground/80 text-base md:text-lg leading-relaxed font-body text-center">
+              <p className="text-foreground text-base md:text-lg leading-relaxed font-body text-center">
                 {p}
               </p>
             </AnimatedSection>
