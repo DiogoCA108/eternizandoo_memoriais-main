@@ -2,12 +2,43 @@
   RewriteEngine On
   RewriteBase /
 
-  # Redirecionamento específico
-  RewriteRule ^m/22tqtb/?$ https://www.eternizandoo.com [R=302,L]
+  # ==========================
+  # REDIRECIONAMENTOS QR CODE
+  # ==========================
+
+  # MODELO (copiar e editar)
+  # CLIENTE: joao-heleno-da-silva-01-01-1901
+  # CODIGO: xxxxxx
+  # RewriteRule ^m/CODIGO/?$ https://www.eternizandoo.com/memorial/slug-do-memorial [R=302,L,NE]
+
+
+  # ==========================
+  # TESTES / CORINGAS
+  # ==========================
+
+  # CLIENTE: TESTE_#1
+  # CODIGO: 000000
+  RewriteRule ^m/000000/?$ https://www.eternizandoo.com/memorial/maria [R=302,L,NE]
+ 
+  # CLIENTE: TESTE_#2
+  # CODIGO: 888888
+  RewriteRule ^m/888888/?$ https://www.eternizandoo.com/memorial/16km [R=302,L,NE]
+
+
+  # ==========================
+  # CLIENTES REAIS
+  # ==========================
+
+  # CLIENTE: (a definir)
+  # CODIGO: 22tqtb
+  RewriteRule ^m/22tqtb/?$ https://www.eternizandoo.com [R=302,L,NE]
+
+
+  # ==========================
+  # FALLBACK DO SITE (SPA)
+  # ==========================
 
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule . /index.html [L]
 </IfModule>
-
-RewriteRule ^\.builds - [F,L]
