@@ -107,9 +107,9 @@ const MemorialPage = () => {
             )}
 
             {/* bg-card (light) - Homenagens + divider */}
-            {isAtivo('homenagens') && data.homenagens.length > 0 && (
+            {isAtivo('homenagens') && (
                 <div id="homenagens" className="bg-card">
-                    <TributesSection homenagens={data.homenagens} />
+                    <TributesSection homenagens={data.homenagens || []} slug={data.slug} />
                     <SectionDivider />
                 </div>
             )}
