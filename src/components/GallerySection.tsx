@@ -1,5 +1,5 @@
 import { AnimatedSection } from "./AnimatedSection";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { X, ChevronLeft, ChevronRight, Image, Camera } from "lucide-react";
 
 interface GalleryItem {
@@ -29,6 +29,9 @@ export const GallerySection = ({ galeria }: GallerySectionProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
 
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
   const visible = showAll ? galeria : galeria.slice(0, 8);
 
   const openModal = (index: number) => {
@@ -39,6 +42,31 @@ export const GallerySection = ({ galeria }: GallerySectionProps) => {
   const navigate = (dir: number) => {
     setCurrentIndex((prev) => (prev + dir + galeria.length) % galeria.length);
   };
+
+  const handleSwipeStart = (clientX: number) => {
+    touchEndX.current = null;
+    touchStartX.current = clientX;
+  };
+
+  const handleSwipeMove = (clientX: number) => {
+    touchEndX.current = clientX;
+  };
+
+  const handleSwipeEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return;
+    const minSwipeDistance = 50;
+    const distance = touchStartX.current - touchEndX.current;
+    
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) navigate(1);
+    if (isRightSwipe) navigate(-1);
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
 
   return (
     <section className="memorial-section bg-card">
@@ -91,7 +119,20 @@ export const GallerySection = ({ galeria }: GallerySectionProps) => {
 
       {/* Modal */}
       {modalOpen && (
-        <div className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4">
+        <div 
+          className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4 touch-none select-none"
+          onTouchStart={(e) => handleSwipeStart(e.targetTouches[0].clientX)}
+          onTouchMove={(e) => handleSwipeMove(e.targetTouches[0].clientX)}
+          onTouchEnd={handleSwipeEnd}
+          onMouseDown={(e) => handleSwipeStart(e.clientX)}
+          onMouseMove={(e) => {
+            if (touchStartX.current !== null) handleSwipeMove(e.clientX);
+          }}
+          onMouseUp={handleSwipeEnd}
+          onMouseLeave={() => {
+            if (touchStartX.current !== null) handleSwipeEnd();
+          }}
+        >
           <button onClick={() => setModalOpen(false)} className="absolute top-4 right-4 text-primary-foreground/80 hover:text-primary-foreground">
             <X className="w-8 h-8" />
           </button>
@@ -105,7 +146,7 @@ export const GallerySection = ({ galeria }: GallerySectionProps) => {
           <div className="max-w-3xl w-full text-center">
             <div className={`aspect-video rounded-lg bg-gradient-to-br ${placeholderColors[currentIndex % placeholderColors.length]} flex items-center justify-center`}>
               {galeria[currentIndex]?.url ? (
-                <img src={galeria[currentIndex].url} alt="" className="max-h-[70vh] rounded-lg" />
+                <img src={galeria[currentIndex].url} alt="" className="max-h-[70vh] rounded-lg pointer-events-none" draggable={false} />
               ) : (
                 <div className="flex flex-col items-center gap-3">
                   <Image className="w-16 h-16 text-primary/40" />

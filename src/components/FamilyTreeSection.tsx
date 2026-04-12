@@ -152,9 +152,11 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>
-                <div className="flex justify-center">
-                  <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-primary/60 to-primary/20" />
-                </div>
+                {config.key === "filhos" && (
+                  <div className="flex justify-center">
+                    <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-primary/60 to-primary/20" />
+                  </div>
+                )}
                 {renderGroup(membros, config, 0.2 + idx * 0.1, getHeritageVisuals)}
               </div>
             );

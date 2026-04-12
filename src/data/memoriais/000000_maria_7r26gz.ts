@@ -44,7 +44,7 @@ export const _000000_maria_7r26gz: MemorialData = {
     // Remova ou deixe em branco para usar o padrão
     biografia_titulo: "História de Vida",
     biografia_subtitulo: "Uma vida de amor e dedicação",
-    dedicatoria: "Com amor eterno, seu filho Wellison",
+    dedicatoria: "Com amor eterno, seu filho Wellisson",
 
     // --- CONTEÚDO ---
     texto_biografico: `Maria José dos Santos nasceu em 12 de abril de 1972, na cidade de Moita Bonita, interior de Sergipe. Filha de Manoel e Maria, cresceu em meio à simplicidade, junto com seus irmãos e sobrinhos no sítio Lagoa do Capunga, onde atualmente se encontra o antigo Boi na Brasa.
@@ -71,7 +71,7 @@ Partiu em 17 de dezembro de 2023, deixando um legado de força, amor e superaç�
 
     // Observe a extensão do arquivo (jpg, png, webp)
     galeria: [
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_01.jpg", legenda: "Wellison e Maria no casamento de Wadson" },
+        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_01.jpg", legenda: "Wellisson e Maria no casamento de Wadson" },
         { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_02.jpg", legenda: "Mesversário de Joaquim seu neto" },
         { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_03.jpg", legenda: "Maria e seus 4 filhos" },
         { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_04.jpg", legenda: "Buscando seu primeiro neto Elon na maternidade" },
@@ -114,7 +114,7 @@ Partiu em 17 de dezembro de 2023, deixando um legado de força, amor e superaç�
 
     arvore_genealogica: [
 
-        { nome: "Wellison Santos", relacao: "filho" },
+        { nome: "Wellisson Santos", relacao: "filho" },
         { nome: "Wadson Santos", relacao: "filho" },
         { nome: "Aryel Santos", relacao: "filho" },
         { nome: "Welvys Santos", relacao: "filho" },
