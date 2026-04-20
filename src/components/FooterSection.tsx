@@ -24,9 +24,14 @@ export const FooterSection = () => {
             </span>
           </div>
 
-          <button className="px-8 py-3 border border-gold-light/30 text-gold-light rounded-full font-body text-sm hover:bg-gold-light/10 transition-colors">
+          <a
+            href="https://wa.me/55079999258800?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20Memorial%20Eterno."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 border-2 border-gold-light/30 bg-gold-light/10 text-gold-light rounded-full font-body text-sm hover:bg-gold-light/20 hover:border-gold-light/50 transition-all font-medium shadow-sm"
+          >
             Solicitar Memorial Eterno
-          </button>
+          </a>
         </AnimatedSection>
 
         <div className="mt-16 pt-6 border-t border-primary-foreground/10">
