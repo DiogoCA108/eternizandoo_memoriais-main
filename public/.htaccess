@@ -35,8 +35,8 @@
   
   # 000000
   # CLIENTE: maria-jose-dos-santos-17-12-2023
-  # CODIGO: 7r26gz
-  RewriteRule ^m/7r26gz/?$ https://www.eternizandoo.com/memorial/maria-jose-dos-santos-17-12-2023 [R=302,L,NE]
+  # CODIGO: y974hd
+  RewriteRule ^m/y974hd/?$ https://www.eternizandoo.com/memorial/maria-jose-dos-santos-17-12-2023 [R=302,L,NE]
 
 
   # ==========================
