@@ -14,7 +14,7 @@ export const SoundtrackPlayer = ({ urlAudio, isPlaying, onTogglePlay, onStateCha
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [volume, setVolume] = useState(0.5);
+  const [volume, setVolume] = useState(0.4);
   
   // Create audio element
   useEffect(() => {

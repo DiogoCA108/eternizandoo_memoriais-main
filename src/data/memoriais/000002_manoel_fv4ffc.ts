@@ -79,10 +79,10 @@ Deixa como legado o exemplo de honestidade e compaixão, sendo lembrado com muit
         { tipo: "foto", url: "/fotos/000002_manoel_fv4ffc/gallery/foto_10.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000002_manoel_fv4ffc/gallery/foto_11.jpeg", legenda: "" },
     ],
-    
+
     trilha_sonora: {
-        titulo: "Amazing Grace",
-        descricao: "Uma melodia que acompanha este memorial como símbolo de paz e lembrança.",
+        titulo: "A casa da saudade",
+        descricao: "Uma melodia que acompanha este memorial.",
         url_audio: "/trilhas_sonoras/000002_manoel_fv4ffc.mp3"
     },
 
