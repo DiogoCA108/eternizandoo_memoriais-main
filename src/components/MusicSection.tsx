@@ -40,31 +40,31 @@ export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtr
           <div className="section-divider" />
         </AnimatedSection>
 
-        <div className="mt-12 max-w-xl mx-auto space-y-10">
+        <div className="mt-8 max-w-xl mx-auto space-y-6">
           {/* TRILHA SONORA */}
           {hasTrilhaSonora && (
             <AnimatedSection delay={0.1}>
-              <div className="bg-card border border-border/50 rounded-2xl p-6 sm:p-8 shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <Headphones className="w-5 h-5 text-primary" />
-                  <h3 className="font-display text-xl sm:text-2xl text-foreground font-medium">
+              <div className="bg-card border border-border shadow-sm rounded-xl p-5 sm:p-6 hover:border-primary/30 hover:shadow-md transition-all">
+                <div className="flex items-center gap-2.5 mb-3">
+                  <Headphones className="w-4 h-4 text-primary/80" />
+                  <h3 className="font-display text-lg sm:text-xl text-foreground font-medium">
                     Trilha sonora deste memorial
                   </h3>
                 </div>
                 
-                <div className="mb-6">
-                  <p className="font-display text-lg text-foreground font-semibold mb-1">
+                <div className="mb-4">
+                  <p className="font-display text-[15px] sm:text-base text-foreground font-semibold mb-0.5">
                     {trilhaSonora.titulo}
                   </p>
                   {trilhaSonora.descricao && (
-                    <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                    <p className="text-muted-foreground/90 font-body text-xs sm:text-[13px] leading-snug">
                       {trilhaSonora.descricao}
                     </p>
                   )}
                 </div>
 
                 {onToggleSoundtrack && (
-                  <div className="flex justify-center mt-6">
+                  <div className="flex justify-center mt-4">
                     <button 
                       onClick={onToggleSoundtrack}
                       className={`inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all shadow-sm ${
@@ -101,7 +101,7 @@ export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtr
           {hasMusicas && (
             <div className="space-y-4">
               <AnimatedSection delay={0.2}>
-                <div className="flex items-center gap-3 mb-6 px-2">
+                <div className="flex items-center justify-center gap-3 mb-5 px-2 text-center">
                   <Music className="w-5 h-5 text-primary/80" />
                   <h3 className="font-display text-xl sm:text-2xl text-foreground font-medium">
                     Músicas que marcaram sua história
@@ -109,16 +109,16 @@ export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtr
                 </div>
               </AnimatedSection>
 
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 {musicas.map((m, i) => (
                   <AnimatedSection key={i} delay={0.3 + i * 0.1}>
-                    <div className="flex items-start gap-4 p-4 sm:p-5 rounded-xl bg-background border border-border/40 hover:border-primary/20 transition-colors group">
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-primary/5 text-primary/60 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
-                        <Music className="w-4 h-4" />
+                    <div className="flex items-center gap-3.5 px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl bg-card border border-border shadow-sm hover:border-primary/30 hover:shadow-md transition-all group">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-primary/10 text-primary/70 group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+                        <Music className="w-3.5 h-3.5" />
                       </div>
-                      <div className="flex-1 min-w-0 pt-0.5">
-                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 mb-1">
-                          <p className="text-foreground font-display text-base font-medium truncate">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2">
+                          <p className="text-foreground font-display text-[15px] sm:text-[17px] font-medium truncate">
                             {m.titulo}
                           </p>
                           <p className="text-muted-foreground font-body text-xs sm:text-sm truncate">
@@ -126,7 +126,7 @@ export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtr
                           </p>
                         </div>
                         {m.contexto && (
-                          <p className="text-muted-foreground/80 font-body text-xs italic mt-1.5 leading-relaxed">
+                          <p className="text-muted-foreground/80 font-body text-[11px] sm:text-xs italic mt-0.5 leading-snug">
                             {m.contexto}
                           </p>
                         )}
