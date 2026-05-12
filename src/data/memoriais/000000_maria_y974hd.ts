@@ -10,7 +10,7 @@ import type { MemorialData } from "./types";
 // Se o seu ID começar com número (ex: 000001), você PRECISA colocar um underline (_)
 // na frente do nome da constante abaixo e também na hora de importá-la no index.ts.
 
-export const _000000_maria_7r26gz: MemorialData = {
+export const _000000_maria_y974hd: MemorialData = {
     // --- ROTA DO SITE ---
     // Substitua URL_FINAL pela rota desejada no navegador (ex: josefo-martinez-13-03-2002)
     slug: "maria-jose-dos-santos-17-12-2023",
@@ -30,8 +30,8 @@ export const _000000_maria_7r26gz: MemorialData = {
     // --- IMAGENS PRINCIPAIS ---
     // Substitua ID_MEMORIAL pelo nome da pasta (ex: 000001_josefo_7r26gz)
     // Observe a extensão do arquivo (jpg, png, webp)
-    heroImage: "/fotos/000000_maria_7r26gz/hero.jpg",
-    profilePhoto: "/fotos/000000_maria_7r26gz/profile.jpg",
+    heroImage: "/fotos/000000_maria_y974hd/hero.jpg",
+    profilePhoto: "/fotos/000000_maria_y974hd/profile.jpg",
 
     // --- DADOS BÁSICS ---
     nome_completo: "Maria José dos Santos",
@@ -71,45 +71,45 @@ Partiu em 17 de dezembro de 2023, deixando um legado de força, amor e superaç�
 
     // Observe a extensão do arquivo (jpg, png, webp)
     galeria: [
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_01.jpg", legenda: "Wellisson e Maria no casamento de Wadson" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_02.jpg", legenda: "Mesversário de Joaquim seu neto" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_03.jpg", legenda: "Maria e seus 4 filhos" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_04.jpg", legenda: "Buscando seu primeiro neto Elon na maternidade" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_05.jpg", legenda: "Voltando da matertenidade" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_06.jpg", legenda: "Chá de revelação do seu segundo neto 'Joaquim'" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_07.jpg", legenda: "Comemorando seu anversário" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_08.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_09.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_10.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_11.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_12.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_13.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_14.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_15.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_16.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_17.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_18.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_19.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_20.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_21.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_22.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_23.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_24.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_25.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_26.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_27.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_28.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_29.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_30.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_31.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_32.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_33.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_34.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_35.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_36.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_37.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_38.jpg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000000_maria_7r26gz/gallery/foto_39.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_01.jpg", legenda: "Wellisson e Maria no casamento de Wadson" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_02.jpg", legenda: "Mesversário de Joaquim seu neto" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_03.jpg", legenda: "Maria e seus 4 filhos" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_04.jpg", legenda: "Buscando seu primeiro neto Elon na maternidade" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_05.jpg", legenda: "Voltando da matertenidade" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_06.jpg", legenda: "Chá de revelação do seu segundo neto 'Joaquim'" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_07.jpg", legenda: "Comemorando seu anversário" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_08.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_09.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_10.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_11.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_12.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_13.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_14.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_15.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_16.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_17.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_18.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_19.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_20.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_21.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_22.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_23.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_24.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_25.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_26.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_27.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_28.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_29.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_30.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_31.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_32.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_33.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_34.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_35.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_36.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_37.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_38.jpg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000000_maria_y974hd/gallery/foto_39.jpg", legenda: "" },
     ],
 
     arvore_genealogica: [
@@ -145,6 +145,6 @@ Partiu em 17 de dezembro de 2023, deixando um legado de força, amor e superaç�
         horario_visita: "Segunda a Domingo, das 8h às 17h",
         link_maps: "https://maps.app.goo.gl/uUFwgqPb8q5JvaYKA",
         query_mapa: "", // Termo de busca exato ou coordenadas lat,long para o mapa (opcional)
-        foto_url: "/fotos/000000_maria_7r26gz/tumulo.jpg", // Opcional (/fotos/ID_MEMORIAL/tumulo.jpg)
+        foto_url: "/fotos/000000_maria_y974hd/tumulo.jpg", // Opcional (/fotos/ID_MEMORIAL/tumulo.jpg)
     },
 };

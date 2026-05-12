@@ -3,7 +3,7 @@ import { desafio16kmData } from "./16km";
 import type { MemorialData } from "./types";
 import { mariaData } from "./maria";
 import { _000001_josefo_7r26gz } from "./000001_josefo_7r26gz";
-import { _000000_maria_7r26gz } from "./000000_maria_7r26gz";
+import { _000000_maria_y974hd } from "./000000_maria_y974hd";
 // Para adicionar um novo memorial:
 // 1. Crie o arquivo de dados do memorial copiando o "_template.ts"
 // 2. Importe o arquivo acima: 
@@ -16,5 +16,5 @@ export const memoriais: Record<string, MemorialData> = {
     "16km": desafio16kmData,
     "maria": mariaData,
     //   "000001_josefo_7r26gz": _000001_josefo_7r26gz,
-    "000000_maria_7r26gz": _000000_maria_7r26gz,
+    "000000_maria_y974hd": _000000_maria_y974hd,
 };  
