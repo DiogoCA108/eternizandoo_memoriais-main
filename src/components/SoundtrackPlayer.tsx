@@ -7,9 +7,10 @@ interface SoundtrackPlayerProps {
   autoPlay?: boolean;
   isPlaying: boolean;
   onTogglePlay: () => void;
+  onStateChange?: (isPlaying: boolean) => void;
 }
 
-export const SoundtrackPlayer = ({ urlAudio, isPlaying, onTogglePlay }: SoundtrackPlayerProps) => {
+export const SoundtrackPlayer = ({ urlAudio, isPlaying, onTogglePlay, onStateChange }: SoundtrackPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,11 +41,50 @@ export const SoundtrackPlayer = ({ urlAudio, isPlaying, onTogglePlay }: Soundtra
     if (!audioRef.current) return;
     
     if (isPlaying) {
-      audioRef.current.play().catch(console.error);
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.warn("Autoplay bloqueado pelo navegador:", error);
+          if (onStateChange) onStateChange(false);
+        });
+      }
     } else {
       audioRef.current.pause();
     }
-  }, [isPlaying]);
+  }, [isPlaying, onStateChange]);
+
+  // Handle auto-play on first interaction (Workaround for browser policies)
+  useEffect(() => {
+    let hasInteracted = false;
+
+    const tryAutoplay = () => {
+      if (hasInteracted) return;
+      hasInteracted = true;
+      
+      const events = ["click", "scroll", "touchstart", "keydown"];
+      events.forEach(event => document.removeEventListener(event, tryAutoplay));
+
+      if (audioRef.current && audioRef.current.paused) {
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            if (onStateChange) onStateChange(true);
+          }).catch(() => {
+            // Se falhar de novo, deixa quieto.
+          });
+        }
+      }
+    };
+
+    const events = ["click", "scroll", "touchstart", "keydown"];
+    events.forEach(event => 
+      document.addEventListener(event, tryAutoplay, { once: true, passive: true })
+    );
+
+    return () => {
+      events.forEach(event => document.removeEventListener(event, tryAutoplay));
+    };
+  }, [onStateChange]);
 
   // Handle volume change
   useEffect(() => {

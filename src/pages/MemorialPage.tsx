@@ -150,6 +150,7 @@ const MemorialPage = () => {
                     urlAudio={data.trilha_sonora.url_audio}
                     isPlaying={isSoundtrackPlaying}
                     onTogglePlay={() => setIsSoundtrackPlaying(!isSoundtrackPlaying)}
+                    onStateChange={setIsSoundtrackPlaying}
                 />
             )}
         </div>
