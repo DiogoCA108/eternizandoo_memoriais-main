@@ -44,7 +44,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
   const memorialBadgeColorClass = isMemorialMan ? "bg-navy" : "bg-[#C4A476]";
   const conjugeBadgeColorClass = isMemorialMan ? "bg-[#C4A476]" : "bg-slate-400 dark:bg-slate-500";
 
-  const memorialCardColorClass = isMemorialMan ? "from-navy to-[#253954] shadow-navy/30" : "gold-gradient shadow-[0_0_15px_rgba(180,150,80,0.3)]";
+  const memorialCardColorClass = isMemorialMan ? "bg-gradient-to-br from-navy to-[#253954] shadow-navy/30" : "gold-gradient shadow-[0_0_15px_rgba(180,150,80,0.3)]";
 
   const getHeritageVisuals = (m: FamilyMember) => {
     if (!m.parentesco) {

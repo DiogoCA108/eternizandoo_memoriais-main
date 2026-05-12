@@ -1,6 +1,7 @@
 import { joaoData } from "./joao";
 import { desafio16kmData } from "./16km";
 import type { MemorialData } from "./types";
+import { _000002_manoel_fv4ffc } from "./000002_manoel_fv4ffc";
 import { mariaData } from "./maria";
 import { _000001_josefo_7r26gz } from "./000001_josefo_7r26gz";
 import { _000000_maria_y974hd } from "./000000_maria_y974hd";
@@ -14,6 +15,7 @@ import { _000000_maria_y974hd } from "./000000_maria_y974hd";
 export const memoriais: Record<string, MemorialData> = {
     "joao": joaoData,
     "16km": desafio16kmData,
+    "000002_manoel_fv4ffc": _000002_manoel_fv4ffc,
     "maria": mariaData,
     //   "000001_josefo_7r26gz": _000001_josefo_7r26gz,
     "000000_maria_y974hd": _000000_maria_y974hd,
