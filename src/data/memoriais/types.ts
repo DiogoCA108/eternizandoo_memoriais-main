@@ -33,7 +33,16 @@ export interface MemorialData {
     texto_biografico: string;
     habitos?: Array<{ tipo: string; descricao: string }>;
     galeria?: Array<{ tipo: "foto" | "video"; url: string; legenda: string }>;
-    musicas?: Array<{ titulo: string; url_player: string }>;
+    trilha_sonora?: {
+        titulo: string;
+        descricao?: string;
+        url_audio: string;
+    };
+    musicas?: Array<{
+        titulo: string;
+        artista: string;
+        contexto?: string;
+    }>;
     arvore_genealogica?: Array<{ nome: string; relacao: string; parentesco?: "memorial" | "conjuge" | "ambos" }>;
     linha_tempo?: Array<{ titulo_evento: string; data_evento: string; descricao: string; ordem: number }>;
     homenagens?: Array<{ nome: string; vinculo: string; mensagem: string; data: string }>;

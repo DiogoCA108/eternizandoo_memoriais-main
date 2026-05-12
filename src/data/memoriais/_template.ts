@@ -10,10 +10,10 @@ import type { MemorialData } from "./types";
 // Se o seu ID começar com número (ex: 000001), você PRECISA colocar um underline (_)
 // na frente do nome da constante abaixo e também na hora de importá-la no index.ts.
 
-export const _ID_MEMORIAL: MemorialData = {
+export const _000000_maria_7r26gz: MemorialData = {
     // --- ROTA DO SITE ---
     // Substitua URL_FINAL pela rota desejada no navegador (ex: josefo-martinez-13-03-2002)
-    slug: "URL_FINAL",
+    slug: "/memorial/maria-jose-dos-santos-17-12-2023",
 
     // Configuração de exibição das seções (opcional - por padrão todas que tiverem dados são exibidas)
     secoes_ativas: {
@@ -63,8 +63,14 @@ Pode ter múltiplos parágrafos separados por quebra de linha dupla.`,
         // { tipo: "foto", url: "/fotos/ID_MEMORIAL/gallery/foto1.jpg", legenda: "Legenda da foto 1" },
     ],
 
+    trilha_sonora: {
+        titulo: "Nome da Música da Trilha",
+        descricao: "Uma breve descrição ou mensagem sobre essa música (opcional)",
+        url_audio: "/trilhas_sonoras/ID_MEMORIAL.mp3"
+    },
+
     musicas: [
-        { titulo: "Título da Música - Artista", url_player: "#" },
+        { titulo: "Título da Música", artista: "Nome do Artista", contexto: "Momento marcante com essa música (opcional)" },
     ],
 
     arvore_genealogica: [

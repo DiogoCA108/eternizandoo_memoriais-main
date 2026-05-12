@@ -79,14 +79,20 @@ Deixa como legado o exemplo de honestidade e compaixão, sendo lembrado com muit
         { tipo: "foto", url: "/fotos/000002_manoel_fv4ffc/gallery/foto_10.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000002_manoel_fv4ffc/gallery/foto_11.jpeg", legenda: "" },
     ],
+    
+    trilha_sonora: {
+        titulo: "Amazing Grace",
+        descricao: "Uma melodia que acompanha este memorial como símbolo de paz e lembrança.",
+        url_audio: "/trilhas_sonoras/000002_manoel_fv4ffc.mp3"
+    },
 
     musicas: [
-        { titulo: "A casa da saudade - Flávio José", url_player: "#" },
-        { titulo: "Espumas ao vento - Flávio José", url_player: "#" },
-        { titulo: "Asa Branca - Luiz Gonzaga", url_player: "#" },
-        { titulo: "Retrovisor - Canindé", url_player: "#" },
-        { titulo: "Velho meu querido velho - Altemar Dutra", url_player: "#" },
-        { titulo: "Trovoada - Vavá Machado e marcolino", url_player: "#" },
+        { titulo: "A casa da saudade", artista: "Flávio José" },
+        { titulo: "Espumas ao vento", artista: "Flávio José" },
+        { titulo: "Asa Branca", artista: "Luiz Gonzaga" },
+        { titulo: "Retrovisor", artista: "Canindé" },
+        { titulo: "Velho meu querido velho", artista: "Altemar Dutra" },
+        { titulo: "Trovoada", artista: "Vavá Machado e Marcolino" },
     ],
 
     arvore_genealogica: [

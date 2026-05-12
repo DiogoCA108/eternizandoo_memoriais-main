@@ -1,4 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
+import { useState } from "react";
 import { memoriais } from "@/data/memoriais";
 import { MemorialData } from "@/data/memoriais/types";
 import { MemorialNav } from "@/components/MemorialNav";
@@ -14,9 +15,11 @@ import { LocationSection } from "@/components/LocationSection";
 import { FooterSection } from "@/components/FooterSection";
 import { SectionDivider } from "@/components/SectionDivider";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { SoundtrackPlayer } from "@/components/SoundtrackPlayer";
 
 const MemorialPage = () => {
     const { slug } = useParams();
+    const [isSoundtrackPlaying, setIsSoundtrackPlaying] = useState(true);
 
     // Procura na lista de memoriais qual deles tem a propriedade 'slug' igual à URL atual
     const data = Object.values(memoriais).find(m => m?.slug === slug);
@@ -83,9 +86,14 @@ const MemorialPage = () => {
             )}
 
             {/* bg-background (default) - Músicas + divider */}
-            {isAtivo('musicas') && data.musicas && data.musicas.length > 0 && (
+            {isAtivo('musicas') && ((data.musicas && data.musicas.length > 0) || data.trilha_sonora) && (
                 <div className="bg-background">
-                    <MusicSection musicas={data.musicas} />
+                    <MusicSection 
+                        trilhaSonora={data.trilha_sonora}
+                        musicas={data.musicas} 
+                        isPlaying={isSoundtrackPlaying}
+                        onToggleSoundtrack={() => setIsSoundtrackPlaying(!isSoundtrackPlaying)}
+                    />
                     <SectionDivider />
                 </div>
             )}
@@ -136,6 +144,14 @@ const MemorialPage = () => {
             </AnimatedSection>
 
             <FooterSection />
+
+            {data.trilha_sonora && (
+                <SoundtrackPlayer 
+                    urlAudio={data.trilha_sonora.url_audio}
+                    isPlaying={isSoundtrackPlaying}
+                    onTogglePlay={() => setIsSoundtrackPlaying(!isSoundtrackPlaying)}
+                />
+            )}
         </div>
     );
 };
