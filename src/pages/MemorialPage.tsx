@@ -63,7 +63,7 @@ const MemorialPage = () => {
             )}
 
             {/* bg-background (default) - Hábitos + divider */}
-            {isAtivo('habitos') && data.habitos.length > 0 && (
+            {isAtivo('habitos') && data.habitos && data.habitos.length > 0 && (
                 <div className="bg-background">
                     <HabitsSection habitos={data.habitos} />
                     <SectionDivider />
@@ -71,7 +71,7 @@ const MemorialPage = () => {
             )}
 
             {/* bg-card (light) - Galeria (divider inside component) */}
-            {isAtivo('galeria') && data.galeria.length > 0 && (
+            {isAtivo('galeria') && data.galeria && data.galeria.length > 0 && (
                 <div id="galeria" className="bg-card">
                     <PhotoGallery
                         photos={data.galeria.map((g) => ({ src: g.url, caption: g.legenda }))}
@@ -83,7 +83,7 @@ const MemorialPage = () => {
             )}
 
             {/* bg-background (default) - Músicas + divider */}
-            {isAtivo('musicas') && data.musicas.length > 0 && (
+            {isAtivo('musicas') && data.musicas && data.musicas.length > 0 && (
                 <div className="bg-background">
                     <MusicSection musicas={data.musicas} />
                     <SectionDivider />
@@ -91,7 +91,7 @@ const MemorialPage = () => {
             )}
 
             {/* bg-card (light) - Árvore + divider */}
-            {isAtivo('arvore_genealogica') && data.arvore_genealogica.length > 0 && (
+            {isAtivo('arvore_genealogica') && data.arvore_genealogica && data.arvore_genealogica.length > 0 && (
                 <div className="bg-card">
                     <FamilyTreeSection membros={data.arvore_genealogica} nomeMemorial={data.nome_completo} generoMemorial={data.genero} />
                     <SectionDivider />
@@ -99,7 +99,7 @@ const MemorialPage = () => {
             )}
 
             {/* bg-background (default) - Timeline + divider */}
-            {isAtivo('linha_tempo') && data.linha_tempo.length > 0 && (
+            {isAtivo('linha_tempo') && data.linha_tempo && data.linha_tempo.length > 0 && (
                 <div className="bg-background">
                     <TimelineSection eventos={data.linha_tempo} />
                     <SectionDivider />
