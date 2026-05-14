@@ -31,7 +31,7 @@
 
   # CLIENTE: (a definir)
   # CODIGO: 22tqtb
-  RewriteRule ^m/22tqtb/?$ https://www.eternizandoo.com [R=302,L,NE]
+  RewriteRule ^m/y974hd/?$ https://www.eternizandoo.com [R=302,L,NE]
 
   # 000000TESTE
   # CLIENTE: maria-jose-dos-santos-17-12-2023
@@ -42,16 +42,16 @@
   # CLIENTE: maria-jose-dos-santos-17-12-2023
   # CODIGO: y974hd
   RewriteRule ^m/y974hd/?$ https://www.eternizandoo.com/memorial/maria-jose-dos-santos-17-12-2023 [R=302,L,NE]
-
-  # 000002
-  # CLIENTE: manoel-raimundo-januario
-  # CODIGO: fv4ffc
-  RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
-
+  
   # 000001
   # CLIENTE: jose-martins
   # CODIGO: 623pm5
   RewriteRule ^m/623pm5/?$ https://www.eternizandoo.com/memorial/jose-martins-24-12-2008 [R=302,L,NE]
+  
+  # 000002
+  # CLIENTE: manoel-raimundo-januario
+  # CODIGO: fv4ffc
+  RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
 
   # ==========================
