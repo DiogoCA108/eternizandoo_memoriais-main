@@ -48,6 +48,11 @@
   # CODIGO: fv4ffc
   RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
+  # 000001
+  # CLIENTE: jose-martins
+  # CODIGO: 623pm5
+  RewriteRule ^m/623pm5/?$ https://www.eternizandoo.com/memorial/jose-martins-24-12-2008 [R=302,L,NE]
+
 
   # ==========================
   # FALLBACK DO SITE (SPA)
