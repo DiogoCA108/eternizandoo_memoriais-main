@@ -50,14 +50,14 @@ Após deixar o emprego na Brahma, Zé da Brahma empreendeu no ramo de comércio 
     ],
 
     galeria: [
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_01.JPG", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_02.JPG", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_03.JPG", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_04.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_05.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_06.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_07.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_08.JPG", legenda: "" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_01.JPG", legenda: "Foto 3x4" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_02.JPG", legenda: "Zé da Brahma" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_03.JPG", legenda: "Com sua esposa Adelaide" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_04.jpeg", legenda: "Em Medeiros Neto, com sua esposa, filhos: Sandra, Sandro, Selma e Silvia (Gêmeas), e a sobrinha Jaqueline" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_05.jpeg", legenda: "Na casa de Gracino, padrinho de Sandro" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_06.jpeg", legenda: "Com sua mãe segurando os netos, Mesquita - RJ" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_07.jpeg", legenda: "Na casa do padrasto com os filhos" },
+        { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_08.JPG", legenda: "Com seu neto Gabriel" },
         { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_09.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_10.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000001_jose_623pm5/gallery/foto_11.jpeg", legenda: "" },
@@ -71,6 +71,10 @@ Após deixar o emprego na Brahma, Zé da Brahma empreendeu no ramo de comércio 
 
     musicas: [
         { titulo: "Ai Que Saudades da Amélia", artista: "Ataulfo Alves e Mário Lago", contexto: "Canção favorita" },
+        { titulo: "Como é Grande o Meu Amor por Você", artista: "Roberto Carlos", contexto: "Clássico da Jovem Guarda" },
+        { titulo: "O Calhambeque", artista: "Roberto Carlos", contexto: "Sucesso irreverente" },
+        { titulo: "Pobre Menina", artista: "Leno e Lilian", contexto: "Ícone dos anos 60" },
+        { titulo: "Devolva-me", artista: "Leno e Lilian", contexto: "Clássico romântico" },
     ],
 
     arvore_genealogica: [
@@ -102,20 +106,27 @@ Após deixar o emprego na Brahma, Zé da Brahma empreendeu no ramo de comércio 
 
     linha_tempo: [
         { titulo_evento: "Nascimento", data_evento: "1938-05-03", descricao: "Nasceu em Mimoso do Sul, Espírito Santo.", ordem: 1 },
-        { titulo_evento: "Serviço Militar", data_evento: "1958-01-01", descricao: "Serviu como Soldado da Força Aérea Brasileira na Base Aérea dos Afonsos.", ordem: 2 },
-        { titulo_evento: "Polícia Militar", data_evento: "1960-01-01", descricao: "Foi Soldado da Polícia Militar do Rio de Janeiro.", ordem: 3 },
+        { titulo_evento: "Serviço Militar", data_evento: "", descricao: "Serviu como Soldado da Força Aérea Brasileira na Base Aérea dos Afonsos.", ordem: 2 },
+        { titulo_evento: "Polícia Militar", data_evento: "", descricao: "Foi Soldado da Polícia Militar do Rio de Janeiro.", ordem: 3 },
         { titulo_evento: "Cerveja Brahma", data_evento: "1965-01-01", descricao: "Início do trabalho como motorista e depois gerente do depósito (Zé da Brahma).", ordem: 4 },
         { titulo_evento: "Casamento", data_evento: "1967-09-09", descricao: "Casou-se com Adelaide Pereira da Costa em Medeiros Neto.", ordem: 5 },
-        { titulo_evento: "Nascimento dos Filhos", data_evento: "1968-01-01", descricao: "Início da formação de sua grande família com 9 filhos.", ordem: 6 },
-        { titulo_evento: "Teixeira de Freitas", data_evento: "1969-01-01", descricao: "Mudou-se para Teixeira de Freitas para acompanhar o depósito da Brahma.", ordem: 7 },
-        { titulo_evento: "Empreendedorismo", data_evento: "1985-01-01", descricao: "Abriu seu próprio negócio no ramo de gelo e mercearia.", ordem: 8 },
-        { titulo_evento: "Partida", data_evento: "2008-12-24", descricao: "Faleceu em Teixeira de Freitas, deixando um legado de força.", ordem: 9 },
+        { titulo_evento: "Nascimento de Sandra", data_evento: "1968-01-01", descricao: "Nascimento de sua primeira filha, Sandra de Cassia.", ordem: 6 },
+        { titulo_evento: "Nascimento de Sandro", data_evento: "1969-01-01", descricao: "Nascimento de seu filho Sandro.", ordem: 7 },
+        { titulo_evento: "Mudança para Teixeira de Freitas", data_evento: "1969-01-01", descricao: "Mudou-se para Teixeira de Freitas para acompanhar o depósito da Brahma.", ordem: 8 },
+        { titulo_evento: "Nascimento de Silvia e Selma", data_evento: "1971-01-01", descricao: "Nascimento das filhas gêmeas Silvia e Selma.", ordem: 9 },
+        { titulo_evento: "Nascimento de Silvio", data_evento: "1972-01-01", descricao: "Nascimento de seu filho Silvio José.", ordem: 10 },
+        { titulo_evento: "Nascimento de Leila", data_evento: "1973-01-01", descricao: "Nascimento de sua filha Leila.", ordem: 11 },
+        { titulo_evento: "Nascimento de Floriano Neto", data_evento: "1978-01-01", descricao: "Nascimento de seu filho Floriano.", ordem: 12 },
+        { titulo_evento: "Nascimento de Leonardo", data_evento: "1980-01-01", descricao: "Nascimento de seu filho Leonardo.", ordem: 13 },
+        { titulo_evento: "Nascimento de José Luís", data_evento: "1981-01-01", descricao: "Nascimento de seu filho José Luís.", ordem: 14 },
+        { titulo_evento: "Empreendedorismo", data_evento: "1985-01-01", descricao: "Abriu seu próprio negócio no ramo de gelo e mercearia.", ordem: 15 },
+        { titulo_evento: "Partida", data_evento: "2008-12-24", descricao: "Faleceu no Hospital Municipal de Teixeira de Freitas – BA, onde estava internado em consequência de câncer, deixando um legado de força.", ordem: 16 },
     ],
 
     homenagens: [],
 
     localizacao_tumulo: {
-        endereco: "Rua da Saudade, 75, Nova Teixeira, Teixeira de Freitas – Ba. Lote 19, Quadra 21.",
+        endereco: "Rua da Saudade, 75, Nova Teixeira, Teixeira de Freitas – BA. Lote 19, Quadra 21.",
         horario_visita: "Segunda a Domingo, das 8h às 17h",
         link_maps: "https://www.google.com/maps/search/Rua+da+Saudade,+75,+Nova+Teixeira,+Teixeira+de+Freitas",
         query_mapa: "Rua da Saudade, 75, Nova Teixeira, Teixeira de Freitas",
