@@ -17,7 +17,7 @@ export const _000001_jose_623pm5: MemorialData = {
 
     // --- IMAGENS PRINCIPAIS ---
     heroImage: "/fotos/000001_jose_623pm5/hero.jpg",
-    profilePhoto: "/fotos/000001_jose_623pm5/profile.png",
+    profilePhoto: "/fotos/000001_jose_623pm5/profile.jpeg",
 
     // --- DADOS BÁSICOS ---
     nome_completo: "José Martins",
