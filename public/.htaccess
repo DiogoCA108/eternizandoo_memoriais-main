@@ -29,8 +29,8 @@
   # CLIENTES REAIS
   # ==========================
 
-  # CLIENTE: (a definir)
-  # CODIGO: 22tqtb
+  # CLIENTE: eternizandoo 
+  # CODIGO: akux7c
   RewriteRule ^m/akux7c/?$ https://www.eternizandoo.com [R=302,L,NE]
 
   # 000000TESTE
@@ -52,6 +52,11 @@
   # CLIENTE: manoel-raimundo-januario
   # CODIGO: fv4ffc
   RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
+
+  # 000007
+  # CLIENTE: manoel-raimundo-januario
+  # CODIGO: qvnu4b
+  RewriteRule ^m/qvnu4b/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
 
   # ==========================
