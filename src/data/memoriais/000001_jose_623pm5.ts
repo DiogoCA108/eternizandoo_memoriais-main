@@ -28,7 +28,7 @@ export const _000001_jose_623pm5: MemorialData = {
 
     // --- TEXTOS DA PÁGINA ---
     biografia_titulo: "História de Vida",
-    biografia_subtitulo: "Um eterno guerreiro",
+    biografia_subtitulo: "Uma vida de amor e dedicação",
     dedicatoria: "Com amor eterno, seu neto Diogo",
 
     // --- CONTEÚDO ---
@@ -92,7 +92,7 @@ Após deixar o emprego na Brahma, Zé da Brahma empreendeu no ramo de comércio 
         { nome: "José Luís Pereira Martins", relacao: "filho" },
         { nome: "Diogo Gonçalves Martins", relacao: "neto" },
         { nome: "Pâmella Gonçalves Martins", relacao: "neto" },
-        { nome: "Rafaela Fernanda Pereira Souza", relacao: "neto" },
+        { nome: "Rafaela Fernanda Pereira Sousa", relacao: "neto" },
         { nome: "Vinicius Vieira Martins", relacao: "neto" },
         { nome: "Tiago Martins Mão de Ferro", relacao: "neto" },
         { nome: "Gabriel Henrique Pereira Martins", relacao: "neto" },
@@ -111,8 +111,8 @@ Após deixar o emprego na Brahma, Zé da Brahma empreendeu no ramo de comércio 
         { titulo_evento: "Cerveja Brahma", data_evento: "1965-01-01", descricao: "Início do trabalho como motorista e depois gerente do depósito (Zé da Brahma).", ordem: 4 },
         { titulo_evento: "Casamento", data_evento: "1967-09-09", descricao: "Casou-se com Adelaide Pereira da Costa em Medeiros Neto.", ordem: 5 },
         { titulo_evento: "Nascimento de Sandra", data_evento: "1968-01-01", descricao: "Nascimento de sua primeira filha, Sandra de Cassia.", ordem: 6 },
-        { titulo_evento: "Nascimento de Sandro", data_evento: "1969-01-01", descricao: "Nascimento de seu filho Sandro.", ordem: 7 },
-        { titulo_evento: "Mudança para Teixeira de Freitas", data_evento: "1969-01-01", descricao: "Mudou-se para Teixeira de Freitas para acompanhar o depósito da Brahma.", ordem: 8 },
+        { titulo_evento: "Mudança para Teixeira de Freitas", data_evento: "1969-01-01", descricao: "Mudou-se para Teixeira de Freitas para acompanhar o depósito da Brahma.", ordem: 7 },
+        { titulo_evento: "Nascimento de Sandro", data_evento: "1969-01-01", descricao: "Nascimento de seu filho Sandro.", ordem: 8 },
         { titulo_evento: "Nascimento de Silvia e Selma", data_evento: "1971-01-01", descricao: "Nascimento das filhas gêmeas Silvia e Selma.", ordem: 9 },
         { titulo_evento: "Nascimento de Silvio", data_evento: "1972-01-01", descricao: "Nascimento de seu filho Silvio José.", ordem: 10 },
         { titulo_evento: "Nascimento de Leila", data_evento: "1973-01-01", descricao: "Nascimento de sua filha Leila.", ordem: 11 },

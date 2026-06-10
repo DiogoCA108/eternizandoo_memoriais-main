@@ -54,9 +54,9 @@
   RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
   # 000007
-  # CLIENTE: manoel-raimundo-januario
+  # CLIENTE: sandro-tenorio-de-holanda
   # CODIGO: qvnu4b
-  RewriteRule ^m/qvnu4b/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
+  RewriteRule ^m/qvnu4b/?$ https://www.eternizandoo.com/memorial/sandro-tenorio-de-holanda-02-03-2021 [R=302,L,NE]
 
 
   # ==========================

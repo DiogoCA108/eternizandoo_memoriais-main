@@ -11,7 +11,7 @@ export const joaoData: MemorialData = {
     frase_homenagem: "Seu amor iluminou cada vida que tocou, e sua luz permanecerá eternamente em nossos corações.",
 
     biografia_titulo: "História de Vida",
-    biografia_subtitulo: "Uma vida de amor",
+    biografia_subtitulo: "Uma vida de amor e dedicação",
     dedicatoria: "Com amor eterno, a família Silva",
 
     texto_biografico: `Maria Helena da Silva nasceu em 15 de março de 1942, em uma pequena cidade do interior de Minas Gerais, filha de José Antônio e Dona Conceição. Cresceu cercada pelo aroma do café fresco e pelo som das cigarras nas tardes quentes.

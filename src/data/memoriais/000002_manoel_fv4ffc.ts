@@ -43,7 +43,7 @@ export const _000002_manoel_fv4ffc: MemorialData = {
     // --- TEXTOS DA PÁGINA (OPCIONAIS) ---
     // Remova ou deixe em branco para usar o padrão
     biografia_titulo: "História de Vida",
-    biografia_subtitulo: "Um legado de trabalho e amor à família",
+    biografia_subtitulo: "Uma vida de amor e dedicação",
     dedicatoria: "Com eterno amor, sua neta Deborah Emmanuele",
 
     // --- CONTEÚDO ---
