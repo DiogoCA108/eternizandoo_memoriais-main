@@ -36,7 +36,7 @@ export const _000007_sandro_qvnu4b: MemorialData = {
 
 Um momento que ficou eternizado foi o seu último aniversário, em 2021. Como se o destino quisesse registrar aquele instante, ele reuniu todos os irmãos e familiares — algo raro e especial. Naquele dia, fez questão de tirar fotos com todos. Hoje, essas imagens carregam um valor imenso: são lembranças de um encontro que marcou para sempre.
 
-Outro gesto que jamais será esquecido foi quando ele chamou o filho mais velho para seguir ao seu lado no setor funerário. Um convite cheio de orgulho, confiança e amor. Infelizmente, ele não chegou a ver essa continuidade — mas o seu legado foi mais forte que o tempo.
+Outro gesto que jamais será esquecido foi quando ele chamou o filho mais velho para seguir ao seu lado no setor funerário. Um convite cheio de orgulho, confiança e amor. Infelizmente, ele não chegou a ver essa continuidade... mas o seu legado foi mais forte que o tempo.
 
 Hoje, esse caminho continua sendo trilhado com o mesmo sentimento que ele ensinou: amor, respeito e dedicação ao próximo. Seu exemplo segue vivo em cada atendimento, em cada palavra de conforto e em cada família acolhida.
 
@@ -52,12 +52,12 @@ Sandro partiu no dia 2 de março de 2021, aos 45 anos, em Canindé de São Franc
 
     galeria: [
         { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_01.jpeg", legenda: "Lembranças inesquecíveis" },
-        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_02.jpeg", legenda: "Momentos especiais" },
-        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_03.jpeg", legenda: "Registros de afeto" },
-        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_04.jpeg", legenda: "Encontro em família" },
-        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_05.jpeg", legenda: "Sorrisos que ficam" },
-        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_06.JPG", legenda: "Lembranças felizes" },
-        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_07.jpeg", legenda: "Um legado de amor" },
+        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_02.jpeg", legenda: "Com seu filho, Anderson" },
+        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_03.jpeg", legenda: "Com seus genros, cunhados e amigos" },
+        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_04.jpeg", legenda: "Com seu neto" },
+        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_05.jpeg", legenda: "Com seu amigo" },
+        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_06.JPG", legenda: "Depois da pescaria" },
+        { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_07.jpeg", legenda: "Com o filho" },
         { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_08.jpeg", legenda: "Recordações preciosas" },
         { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_09.jpeg", legenda: "Tempo de celebrar" },
         { tipo: "foto", url: "/fotos/000007_sandro_qvnu4b/gallery/foto_10.jpeg", legenda: "Eternamente em nossos corações" },

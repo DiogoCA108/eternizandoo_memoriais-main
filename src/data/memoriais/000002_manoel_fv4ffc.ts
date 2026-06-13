@@ -129,7 +129,7 @@ Deixa como legado o exemplo de honestidade e compaixão, sendo lembrado com muit
 
     // Observe a extensão do arquivo (jpg, png, webp)
     localizacao_tumulo: {
-        endereco: "Colina da saudade, R. Hortência Carvalho Sobral, 33 - Jabotiana, Aracaju - SE, 49095-660",
+        endereco: "Cemitério Parque Colina da Saudade: Rua Maria Hortência Carvalho Sobral, 33, (Conjunto Santa Lúcia), Jabutiana, Aracaju, SE, 49095-660 (NÍVEL LAGO)",
         horario_visita: "Segunda a Domingo, das 8h às 17h",
         link_maps: "https://maps.google.com/?q=Colina+da+Saudade+Aracaju",
         query_mapa: "Colina da Saudade, Aracaju",

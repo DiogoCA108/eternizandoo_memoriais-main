@@ -34,15 +34,13 @@ export const _000004_monica_pnnfzt: MemorialData = {
     // --- CONTEÚDO ---
     texto_biografico: `Mônica de Souza Farias nasceu no dia 5 de abril de 1967, trazendo luz e alegria para as vidas de seus pais, Nicanor Farias e Magaly de Souza Farias. Desde a infância, revelou-se uma menina doce, afetuosa e cheia de vida, qualidades que a acompanhariam por toda a sua jornada.
 
-Ainda jovem, Mônica enfrentou um dos momentos mais difíceis de sua trajetória: a perda imensurável de sua querida mãe, dona Magaly. Essa ausência precoce marcou profundamente seu coração, mas também a fortaleceu, transformando-a em uma mulher resiliente, decidida a espalhar o amor e a dedicação que herdara de sua mãe.
+Ainda na adolescência, com apenas 14 anos, Mônica enfrentou um dos momentos mais difíceis de sua trajetória: a perda precoce de sua querida mãe, dona Magaly, no dia 8 de junho de 1981. A partir dessa ausência, ela foi criada por seu pai, seu Nicanor, que com imensa dedicação desempenhou o papel de pai e mãe em sua vida, tornando-se seu grande porto seguro e exemplo de amor.
 
-Com o tempo, o amor sorriu novamente para Mônica em seu casamento, um marco que deu início a uma nova e linda fase de sua vida. Dessa união e do seu desejo de construir um lar acolhedor, nasceram seus três amados filhos, que se tornaram a sua maior razão de viver: Williams Perciano da Silva Junior (nascido em 27 de junho de 1984), Wesley Luan Perciano da Silva (nascido em 18 de janeiro de 1989) e Wallace Ruan Perciano da Silva (nascido em 8 de novembro de 1992).
+Também em 1981, o amor floresceu na vida de Mônica através de seu casamento com Williams Perciano da Silva. Muito jovem e decidida a se dedicar inteiramente ao lar e à família, ela optou por abrir mão dos estudos para construir um lar acolhedor. Desse companheirismo e do desejo de formar uma família, nasceram seus três amados filhos, que se tornaram a sua maior razão de viver: Williams Junior, Wesley Luan e Wallace Ruan. Como mãe, Mônica foi um exemplo de entrega absoluta, vivendo a vida toda em função de seus filhos, que carinhosamente a chamavam de "Mainha".
 
-Como mãe, Mônica foi um exemplo de entrega absoluta. Seus filhos, carinhosamente criados sob seus cuidados e conselhos, cresceram sabendo da força do amor de "Mainha" — o apelido meigo e inocente com que Junior, Wesley e Wallace a chamavam desde a infância.
+Mais tarde, todo esse amor e cuidado de mãe se estenderam de forma especial aos seus netos — Guilherme, Isadora, Briley, Maria Alice e Cecília —, que trouxeram novos sorrisos, fôlego e alegria renovada aos seus dias.
 
-Mais tarde, a vida a agraciou com a bênção de ser avó. Seus netos — Guilherme Vasconcelos Perciano e Isadora Fernandes Perciano (filhos de Williams); Briley Gabriele Araújo Perciano e Maria Alice Perciano do Nascimento (filhas de Wesley); e Cecilia Celine Vieira Perciano (filha de Wallace) — tornaram-se o brilho dos seus olhos. Mônica encontrou na convivência com os netos um novo fôlego e um amor renovado, enchendo sua rotina de sorrisos e carinho.
-
-No dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus. Sua partida deixa uma saudade profunda e dolorosa, mas também um legado imperecível de amor materno, união e afeto que continuará vivo em cada filho, neto e amigo que teve o privilégio de caminhar ao seu lado.`,
+No dia 1º de agosto de 2025, Mônica vivenciou a perda de seu querido pai, seu Nicanor, que a acompanhou e guiou com tanto afeto por toda a vida. Poucos meses depois, no dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus. Sua partida deixa uma saudade profunda e dolorosa, mas também um legado imperecível de amor materno, união e afeto que continuará vivo em cada filho, neto e amigo que teve o privilégio de caminhar ao seu lado.`,
 
     habitos: [
         { tipo: "bebida", descricao: "Suco de mangaba" },
@@ -58,13 +56,13 @@ No dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus.
     ],
 
     galeria: [
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_01.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_02.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_03.JPG", legenda: "" },
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_04.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_05.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_06.jpeg", legenda: "" },
-        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_07.jpeg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_01.jpeg", legenda: "Mônica sempre linda" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_02.jpeg", legenda: "Tomando vinho que tanto gostava" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_03.JPG", legenda: "Com os 3 filhos: Wallace, Wesley e Júlior" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_04.jpeg", legenda: "Com seu Pai, seus 3 filhos e 3 netos" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_05.jpeg", legenda: "Com seu amado Pai" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_06.jpeg", legenda: "Com suas 2 netas" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_07.jpeg", legenda: "Sorriso que sempre acalentava" },
         { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_08.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_09.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_10.jpeg", legenda: "" },
@@ -102,6 +100,8 @@ No dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus.
         { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_42.jpeg", legenda: "" },
         { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_43.JPG", legenda: "" },
         { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_44.jpeg", legenda: "" },
+        { tipo: "foto", url: "/fotos/000004_monica_pnnfzt/gallery/foto_45.JPG", legenda: "Com seu sobrinho, Popó" },
+
     ],
 
     trilha_sonora: {
@@ -121,6 +121,7 @@ No dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus.
     arvore_genealogica: [
         { nome: "Nicanor Farias", relacao: "pai" },
         { nome: "Magaly de Souza Farias", relacao: "mae" },
+        { nome: "Williams Perciano da Silva", relacao: "conjuge" },
         { nome: "Williams Perciano da Silva Junior", relacao: "filho" },
         { nome: "Wesley Luan Perciano da Silva", relacao: "filho" },
         { nome: "Wallace Ruan Perciano da Silva", relacao: "filho" },
@@ -139,15 +140,15 @@ No dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus.
             ordem: 1,
         },
         {
-            titulo_evento: "Perda da Mãe",
-            data_evento: "",
-            descricao: "Passagem de sua mãe, Magaly, uma perda dolorosa que marcou sua trajetória com saudade.",
+            titulo_evento: "Perda de sua Mãe",
+            data_evento: "1981-06-08",
+            descricao: "Passagem precoce de sua mãe, Magaly de Souza Farias, uma perda dolorosa na adolescência de Mônica aos 14 anos.",
             ordem: 2,
         },
         {
             titulo_evento: "Casamento",
-            data_evento: "",
-            descricao: "Uniu-se em matrimônio, dando início ao sonho de construir sua própria família.",
+            data_evento: "1981",
+            descricao: "Casamento com Williams Perciano da Silva, união de muito amor que deu início à construção de sua família.",
             ordem: 3,
         },
         {
@@ -169,10 +170,16 @@ No dia 14 de abril de 2026, o Senhor chamou Mônica de volta ao reino dos céus.
             ordem: 6,
         },
         {
+            titulo_evento: "Perda de seu Pai",
+            data_evento: "2025-08-01",
+            descricao: "Passagem de seu pai, seu Nicanor Farias, que foi seu porto seguro e desempenhou o papel de pai e mãe em sua criação.",
+            ordem: 7,
+        },
+        {
             titulo_evento: "A Partida",
             data_evento: "2026-04-14",
             descricao: "O Senhor a chama de volta ao reino dos céus, deixando saudades eternas.",
-            ordem: 7,
+            ordem: 8,
         },
     ],
 
