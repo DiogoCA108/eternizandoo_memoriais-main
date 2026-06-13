@@ -53,6 +53,12 @@
   # CODIGO: fv4ffc
   RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
+  # 000003
+  # CLIENTE: monica-de-souza-farias
+  # CODIGO: c66zpt
+  RewriteRule ^m/c66zpt/?$ https://www.eternizandoo.com/memorial/monica-de-souza-farias-14-04-2026 [R=302,L,NE]
+
+
   # 000007
   # CLIENTE: sandro-tenorio-de-holanda
   # CODIGO: qvnu4b

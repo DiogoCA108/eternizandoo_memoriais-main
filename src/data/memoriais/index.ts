@@ -5,7 +5,7 @@ import { _000002_manoel_fv4ffc } from "./000002_manoel_fv4ffc";
 import { mariaData } from "./maria";
 import { _000000_maria_y974hd } from "./000000_maria_y974hd";
 import { _000001_jose_623pm5 } from "./000001_jose_623pm5";
-import { _000004_monica_pnnfzt } from "./000004_monica_pnnfzt";
+import { _000003__monica__c66zpt } from "./000003__monica__c66zpt";
 import { _000007_sandro_qvnu4b } from "./000007_sandro_qvnu4b";
 
 // Para adicionar um novo memorial:
@@ -22,6 +22,6 @@ export const memoriais: Record<string, MemorialData> = {
     "maria": mariaData,
     "000000_maria_y974hd": _000000_maria_y974hd,
     "000001_jose_623pm5": _000001_jose_623pm5,
-    "000004_monica_pnnfzt": _000004_monica_pnnfzt,
+    "000003__monica__c66zpt": _000003__monica__c66zpt,
     "000007_sandro_qvnu4b": _000007_sandro_qvnu4b,
 };  
