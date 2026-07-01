@@ -23,7 +23,7 @@ export const _000002_manoel_fv4ffc: MemorialData = {
         musicas: true,
         arvore_genealogica: true,
         linha_tempo: true,
-        homenagens: false,
+        homenagens: true,
         localizacao: true,
     },
 

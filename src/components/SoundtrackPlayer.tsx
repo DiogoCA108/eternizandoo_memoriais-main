@@ -14,7 +14,7 @@ export const SoundtrackPlayer = ({ urlAudio, isPlaying, onTogglePlay, onStateCha
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [volume, setVolume] = useState(0.4);
+  const [volume, setVolume] = useState(0.3);
   
   // Create audio element
   useEffect(() => {
@@ -92,6 +92,28 @@ export const SoundtrackPlayer = ({ urlAudio, isPlaying, onTogglePlay, onStateCha
       audioRef.current.volume = volume;
     }
   }, [volume]);
+
+  // Handle visibility change (pause on leave, play on return)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!audioRef.current) return;
+      
+      if (document.hidden) {
+        audioRef.current.pause();
+      } else {
+        if (isPlaying) {
+          audioRef.current.play().catch((error) => {
+            console.warn("Falha ao retomar trilha sonora ao voltar para a página:", error);
+          });
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [isPlaying]);
 
   const snapToCorner = (_event: any, info: any) => {
     if (!containerRef.current) return;
