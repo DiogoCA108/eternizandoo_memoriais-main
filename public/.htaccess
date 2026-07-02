@@ -58,6 +58,11 @@
   # CODIGO: c66zpt
   RewriteRule ^m/c66zpt/?$ https://www.eternizandoo.com/memorial/monica-de-souza-farias-14-04-2026 [R=302,L,NE]
 
+  # 000005
+  # CLIENTE: jucia-de-jesus-25-03-2026
+  # CODIGO: 48qk95
+  RewriteRule ^m/48qk95/?$ https://www.eternizandoo.com/memorial/jucia-de-jesus-25-03-2026 [R=302,L,NE]
+
 
   # 000007
   # CLIENTE: sandro-tenorio-de-holanda

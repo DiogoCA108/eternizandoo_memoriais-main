@@ -7,6 +7,7 @@ import { _000000_maria_y974hd } from "./000000_maria_y974hd";
 import { _000001_jose_623pm5 } from "./000001_jose_623pm5";
 import { _000003_monica_c66zpt } from "./000003_monica_c66zpt";
 import { _000007_sandro_qvnu4b } from "./000007_sandro_qvnu4b";
+import { _000005_jucia_48qk95 } from "./000005_jucia_48qk95";
 
 // Para adicionar um novo memorial:
 // 1. Crie o arquivo de dados do memorial copiando o "_template.ts"
@@ -24,4 +25,5 @@ export const memoriais: Record<string, MemorialData> = {
     "000001_jose_623pm5": _000001_jose_623pm5,
     "000003_monica_c66zpt": _000003_monica_c66zpt,
     "000007_sandro_qvnu4b": _000007_sandro_qvnu4b,
+    "000005_jucia_48qk95": _000005_jucia_48qk95,
 };  
