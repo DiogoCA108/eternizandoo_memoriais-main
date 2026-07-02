@@ -135,9 +135,7 @@ Partiu em 17 de dezembro de 2023, deixando um legado de força, amor e superaç�
         { titulo_evento: "Partida", data_evento: "2023-12-17", descricao: "Partiu em 17 de dezembro de 2023, deixando um legado eterno de força, amor e dedicação.", ordem: 10 },
     ],
 
-    homenagens: [
-        { nome: "Nome Autor", vinculo: "Relação", mensagem: "Mensagem de carinho...", data: "2024-01-01" },
-    ],
+    homenagens: [],
 
     // Observe a extensão do arquivo (jpg, png, webp)
     localizacao_tumulo: {

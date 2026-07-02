@@ -31,7 +31,7 @@
 
   # CLIENTE: eternizandoo 
   # CODIGO: akux7c
-  RewriteRule ^m/akux7c/?$ https://www.eternizandoo.com [R=302,L,NE]
+  RewriteRule ^m/akux7c/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
   # 000000TESTE
   # CLIENTE: maria-jose-dos-santos-17-12-2023
