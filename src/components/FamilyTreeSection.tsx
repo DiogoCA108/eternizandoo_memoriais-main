@@ -16,10 +16,12 @@ interface FamilyTreeSectionProps {
 const groupConfigs = {
   avos: { key: "avos", label: "Avós", icon: User, filter: (m: FamilyMember) => m.relacao.toLowerCase().includes("avô") || m.relacao.toLowerCase().includes("avó") || m.relacao.toLowerCase().includes("avo") },
   pais: { key: "pais", label: "Pais", icon: User, filter: (m: FamilyMember) => m.relacao === "pai" || m.relacao === "mae" || m.relacao === "mãe" },
+  sogros: { key: "sogros", label: "Sogros", icon: User, filter: (m: FamilyMember) => m.relacao === "sogro" || m.relacao === "sogra" },
   irmaos: { key: "irmaos", label: "Irmãos", icon: Users, filter: (m: FamilyMember) => m.relacao === "irmão" || m.relacao === "irmã" || m.relacao === "irmao" || m.relacao === "irma" },
   filhos: { key: "filhos", label: "Filhos", icon: Users, filter: (m: FamilyMember) => m.relacao === "filho" || m.relacao === "filha" },
   netos: { key: "netos", label: "Netos", icon: Users, filter: (m: FamilyMember) => m.relacao === "neto" || m.relacao === "neta" },
   bisnetos: { key: "bisnetos", label: "Bisnetos", icon: Users, filter: (m: FamilyMember) => m.relacao === "bisneto" || m.relacao === "bisneta" },
+  sobrinhos: { key: "sobrinhos", label: "Sobrinhas e Sobrinhos", icon: Users, filter: (m: FamilyMember) => m.relacao === "sobrinho" || m.relacao === "sobrinha" },
 };
 
 const getInitials = (name: string) => {
@@ -95,7 +97,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
 
         <div className="mt-8 md:mt-12 max-w-2xl mx-auto px-2">
           {/* Pre-memorial groups */}
-          {[groupConfigs.avos, groupConfigs.pais, groupConfigs.irmaos].map((config) => {
+          {[groupConfigs.avos, groupConfigs.pais, groupConfigs.sogros, groupConfigs.irmaos].map((config) => {
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>
@@ -148,7 +150,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
           </AnimatedSection>
 
           {/* Post-memorial groups */}
-          {[groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos].map((config, idx) => {
+          {[groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos, groupConfigs.sobrinhos].map((config, idx) => {
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>

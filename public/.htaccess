@@ -63,6 +63,11 @@
   # CODIGO: 48qk95
   RewriteRule ^m/48qk95/?$ https://www.eternizandoo.com/memorial/jucia-de-jesus-25-03-2026 [R=302,L,NE]
 
+  # 000006
+  # CLIENTE: marlos-lima-da-silva-13-06-2026
+  # CODIGO: c8tagv
+  RewriteRule ^m/c8tagv/?$ https://www.eternizandoo.com/memorial/marlos-lima-da-silva-13-06-2026 [R=302,L,NE]
+
 
   # 000007
   # CLIENTE: sandro-tenorio-de-holanda

@@ -29,13 +29,21 @@ export const BiographySection = ({
         </AnimatedSection>
 
         <div className="mt-12 space-y-6">
-          {paragraphs.map((p, i) => (
-            <AnimatedSection key={i} delay={i * 0.1}>
-              <p className="text-foreground text-base md:text-lg leading-relaxed font-body text-center">
-                {p}
-              </p>
-            </AnimatedSection>
-          ))}
+          {paragraphs.map((p, i) => {
+            const formattedText = p
+              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+              .replace(/\*(.*?)\*/g, '<em>$1</em>')
+              .replace(/_(.*?)_/g, '<em>$1</em>');
+
+            return (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <p 
+                  className="text-foreground text-base md:text-lg leading-relaxed font-body text-center"
+                  dangerouslySetInnerHTML={{ __html: formattedText }}
+                />
+              </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>
