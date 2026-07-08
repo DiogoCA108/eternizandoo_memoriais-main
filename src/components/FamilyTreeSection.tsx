@@ -97,7 +97,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
 
         <div className="mt-8 md:mt-12 max-w-2xl mx-auto px-2">
           {/* Pre-memorial groups */}
-          {[groupConfigs.avos, groupConfigs.pais, groupConfigs.sogros, groupConfigs.irmaos].map((config) => {
+          {[groupConfigs.avos, groupConfigs.pais, groupConfigs.irmaos].map((config) => {
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>
@@ -150,7 +150,7 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
           </AnimatedSection>
 
           {/* Post-memorial groups */}
-          {[groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos, groupConfigs.sobrinhos].map((config, idx) => {
+          {[groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos, groupConfigs.sogros, groupConfigs.sobrinhos].map((config, idx) => {
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>

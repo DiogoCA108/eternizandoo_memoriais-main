@@ -34,13 +34,13 @@ export const _000006_marlos_c8tagv: MemorialData = {
     // --- CONTEÚDO ---
     texto_biografico: `Marlos Lima da Silva nasceu em 21 de setembro de 1987, no acolhedor povoado de Ilha do Ferro, localizado no município de Pão de Açúcar, Alagoas — uma região turística e culturalmente rica às margens do Rio São Francisco. 
 
-Um homem jovem, dotado de uma energia contagiante, bondade singular e flamenguista apaixonado, Marlos cativava a todos ao seu redor. Apaixonado pela cultura sertaneja, nutria um amor profundo por vaquejadas e forró, sendo amigo próximo da dupla Iguinho e Lulinha, de quem acompanhava com entusiasmo a carreira. Constituiu uma linda família ao lado de sua esposa Raiane de Melo Sandes, com quem compartilhou a vida e com quem teve sua filha Isabella Sandes da Silva, hoje com 13 anos. Marlos nutria também um carinho imenso por seus sogros, Genelva e Osman, que o consideravam como um verdadeiro filho, reforçando os laços de união entre ambas as famílias.
+Um homem jovem, dotado de uma energia contagiante, bondade singular e flamenguista apaixonado, Marlos cativava a todos ao seu redor. Apaixonado pela cultura sertaneja, nutria um amor profundo por vaquejadas e forró, sendo amigo próximo da dupla Iguinho e Lulinha, de quem acompanhava com entusiasmo a carreira. Constituiu uma linda família ao lado de sua esposa Raiane de Melo Sandes, com quem compartilhou a vida e com quem teve sua filha Isabella Sandes da Silva, hoje com 13 anos. Marlos tinha um incodicional amor por seus pais, Aniceto e Clenilda, e nutria também um carinho imenso por seus sogros, Genelva e Osman, que o consideravam como um verdadeiro filho, reforçando os laços de união entre ambas as famílias.
 
 Guiado pelo sonho de construir sua casa própria e erguer uma pousada no povoado da Ilha do Ferro, Marlos e sua esposa mudaram-se para Campo Novo do Parecis, na região de Cuiabá, Mato Grosso. Lá, trabalhou incansavelmente para transformar seus projetos de vida em realidade. Nos últimos três anos de sua jornada, passou por uma bonita transformação de vida, dedicando-se a uma caminhada de fé cristã.
 
-Marlos partiu precocemente em 13 de junho de 2026, aos 38 anos. Ele deixa aos pais Aniceto e Clenilda, aos irmãos Lígia e Bruno, à sua esposa e filha, aos sobrinhos e a todos os amigos um legado inesquecível de alegria, determinação e resiliência.
+Marlos partiu precocemente em 13 de junho de 2026, aos 38 anos. Ele deixa aos pais Aniceto e Clenilda, para quem sempre foi um filho profundamente amado, motivo de orgulho e razão de incontáveis momentos de felicidade. O amor que os unia era daqueles que não precisam de palavras: estava presente no cuidado, na preocupação, nos abraços, nas orações e na presença constante. Marlos também amava seus pais com todo o coração e jamais deixava de demonstrar seu carinho, sua gratidão e seu respeito. A partida interrompeu sua presença, mas jamais apagará o amor que construíram ao longo da vida. Aos irmãos Lígia e Bruno, à sua esposa e filha, aos sobrinhos e a todos os amigos, deixa um legado inesquecível de alegria, determinação e resiliência.
 
-**Homenagem e palavras de despedida de sua esposa, Raiane de Melo Sandes:**
+**Homenagem e palavras de despedida de sua Família:**
 
 *"Há dores que as palavras nunca conseguem explicar. A partida do nosso amado Marlos deixou um vazio que jamais será preenchido. Hoje, nossos corações estão partidos, e a saudade já se faz presente de uma forma que parece impossível suportar."*
 
@@ -118,7 +118,7 @@ Marlos partiu precocemente em 13 de junho de 2026, aos 38 anos. Ele deixa aos pa
         { nome: "Lígia Lima da Silva", relacao: "irmã" },
         { nome: "Bruno Lima da Silva", relacao: "irmão" },
         { nome: "Raiane de Melo Sandes", relacao: "cônjuge" },
-        { nome: "Isabella Sandes da Silva", relacao: "filha", parentesco: "memorial" },
+        { nome: "Isabella Sandes da Silva", relacao: "filha", parentesco: "ambos" },
 
         // Sogros considerados muito queridos e parte real da família
         { nome: "Genelva Bezerra de Melo Sandes", relacao: "sogra" },
