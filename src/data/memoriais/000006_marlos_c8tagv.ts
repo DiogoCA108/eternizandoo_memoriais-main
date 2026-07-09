@@ -34,7 +34,7 @@ export const _000006_marlos_c8tagv: MemorialData = {
     // --- CONTEÚDO ---
     texto_biografico: `Marlos Lima da Silva nasceu em 21 de setembro de 1987, no acolhedor povoado de Ilha do Ferro, localizado no município de Pão de Açúcar, Alagoas — uma região turística e culturalmente rica às margens do Rio São Francisco. 
 
-Um homem jovem, dotado de uma energia contagiante, bondade singular e flamenguista apaixonado, Marlos cativava a todos ao seu redor. Apaixonado pela cultura sertaneja, nutria um amor profundo por vaquejadas e forró, sendo amigo próximo da dupla Iguinho e Lulinha, de quem acompanhava com entusiasmo a carreira. Constituiu uma linda família ao lado de sua esposa Raiane de Melo Sandes, com quem compartilhou a vida e com quem teve sua filha Isabella Sandes da Silva, hoje com 13 anos. Marlos tinha um incodicional amor por seus pais, Aniceto e Clenilda, e nutria também um carinho imenso por seus sogros, Genelva e Osman, que o consideravam como um verdadeiro filho, reforçando os laços de união entre ambas as famílias.
+Um homem jovem, dotado de uma energia contagiante, bondade singular e flamenguista apaixonado, Marlos cativava a todos ao seu redor. Apaixonado pela cultura sertaneja, nutria um amor profundo por vaquejadas e forró, sendo grande fã da dupla Iguinho e Lulinha, de quem acompanhava com entusiasmo a carreira. Constituiu uma linda família ao lado de sua esposa Raiane de Melo Sandes, com quem compartilhou a vida e com quem teve sua filha Isabella Sandes da Silva, hoje com 13 anos. Marlos tinha um incodicional amor por seus pais, Aniceto e Clenilda, e nutria também um carinho imenso por seus sogros, Genelva e Osman, que o consideravam como um verdadeiro filho, reforçando os laços de união entre ambas as famílias.
 
 Guiado pelo sonho de construir sua casa própria e erguer uma pousada no povoado da Ilha do Ferro, Marlos e sua esposa mudaram-se para Campo Novo do Parecis, na região de Cuiabá, Mato Grosso. Lá, trabalhou incansavelmente para transformar seus projetos de vida em realidade. Nos últimos três anos de sua jornada, passou por uma bonita transformação de vida, dedicando-se a uma caminhada de fé cristã.
 
@@ -197,9 +197,9 @@ Marlos partiu precocemente em 13 de junho de 2026, aos 38 anos. Ele deixa aos pa
     localizacao_tumulo: {
         endereco: "Cemitério no Povoado Ilha do Ferro, Pão de Açúcar - AL",
         horario_visita: "Segunda a Domingo, das 8h às 17h",
-        link_maps: "https://www.google.com/maps/search/Cemitério+Povoado+Ilha+do+Ferro+Pão+de+Açúcar+AL",
-        query_mapa: "Cemitério Povoado Ilha do Ferro Pão de Açúcar AL",
+        link_maps: "https://maps.app.goo.gl/EFzGbByJwwV1rubx5",
+        query_mapa: "-9.738367, -37.524464",
         foto_url: "",
-        detalhe: "Túmulo segundo à esquerda"
-    } as any // detalhe não está estritamente em types mas pode ser omitido ou usado como custom field
+        detalhe: "Segundo túmulo à esquerda"
+    }
 };

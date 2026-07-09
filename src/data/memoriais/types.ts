@@ -52,5 +52,6 @@ export interface MemorialData {
         link_maps: string;
         foto_url: string;
         query_mapa?: string;
+        detalhe?: string;
     };
 }

@@ -8,6 +8,7 @@ interface LocationData {
   link_maps: string;
   foto_url?: string;
   query_mapa?: string;
+  detalhe?: string;
 }
 
 interface LocationSectionProps {
@@ -88,6 +89,14 @@ export const LocationSection = ({ localizacao }: LocationSectionProps) => {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <p className="text-foreground font-body text-sm leading-relaxed">{localizacao.horario_visita}</p>
+                  </div>
+                )}
+
+                {localizacao.detalhe && (
+                  <div className="flex items-start gap-3 bg-primary/5 p-3 rounded-lg border border-primary/10">
+                    <p className="text-foreground/80 font-body text-xs leading-relaxed">
+                      <strong>Observação:</strong> {localizacao.detalhe}
+                    </p>
                   </div>
                 )}
 
