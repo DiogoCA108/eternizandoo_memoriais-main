@@ -193,13 +193,35 @@ function renderGroup(
       <div className="flex justify-center gap-3 sm:gap-6 flex-wrap mb-2">
         {items.map((m) => {
           const visuals = getHeritageVisuals(m);
+          
+          const crossSymbols = ["✝", "✞", "✟", "†"];
+          let displayName = m.nome;
+          let hasCross = false;
+          let matchedCross = "";
+
+          for (const sym of crossSymbols) {
+            if (m.nome.includes(sym)) {
+              hasCross = true;
+              matchedCross = sym;
+              displayName = m.nome.replace(sym, "").trim();
+              break;
+            }
+          }
+
           return (
             <div key={m.nome} className="text-center p-2 sm:p-4 min-w-[80px] sm:min-w-[100px] relative group transition-transform duration-300 hover:-translate-y-1 cursor-default">
               <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full border flex items-center justify-center mx-auto mb-2 transition-all duration-300 relative ${visuals.bg}`}>
                 <User className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${visuals.icon}`} />
                 {visuals.badge}
               </div>
-              <p className="font-display text-foreground text-xs sm:text-sm font-medium">{m.nome}</p>
+              <p className="font-display text-foreground text-xs sm:text-sm font-medium">
+                {displayName}
+                {hasCross && (
+                  <span className="text-primary ml-1 font-bold inline-block" title="In Memoriam">
+                    {matchedCross}
+                  </span>
+                )}
+              </p>
             </div>
           );
         })}
