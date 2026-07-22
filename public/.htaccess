@@ -75,6 +75,12 @@
   RewriteRule ^m/qvnu4b/?$ https://www.eternizandoo.com/memorial/sandro-tenorio-de-holanda-02-03-2021 [R=302,L,NE]
 
 
+  # 000008
+  # CLIENTE: marizete-gomes-dos-santos-31-05-2026
+  # CODIGO: g85guy
+  RewriteRule ^m/g85guy/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
+
+
   # ==========================
   # FALLBACK DO SITE (SPA)
   # ==========================
