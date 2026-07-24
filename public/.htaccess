@@ -80,6 +80,15 @@
   # CODIGO: g85guy
   RewriteRule ^m/g85guy/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
 
+  # 000010
+  # CLIENTE: PROSPECÇÃO FUNERÁRIAS 24/07
+  # CODIGO: d6gndf
+  RewriteRule ^m/d6gndf/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
+
+  # 000011
+  # CLIENTE: PROSPECÇÃO FUNERÁRIAS 24/07
+  # CODIGO: 72qbxe
+  RewriteRule ^m/72qbxe/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
 
   # ==========================
   # FALLBACK DO SITE (SPA)
