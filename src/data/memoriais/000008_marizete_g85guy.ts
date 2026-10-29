@@ -22,7 +22,7 @@ export const _000008_marizete_g85guy: MemorialData = {
     // --- DADOS BÁSICOS ---
     nome_completo: "Marizete Gomes dos Santos",
     genero: "F",
-    data_nascimento: "1957-01-01",
+    data_nascimento: "1957-10-05",
     data_falecimento: "2026-05-31",
     frase_homenagem: "Sua história de amor, dedicação e união familiar será para sempre o nosso maior alicerce.",
 
@@ -173,7 +173,7 @@ Seu legado continua presente no coração de todos aqueles que aprenderam com el
     ],
 
     linha_tempo: [
-        { titulo_evento: "Nascimento", data_evento: "1957-01-01", descricao: "Nasceu na região de São Manuel, em São Paulo, trazendo alegria aos seus pais e irmãos.", ordem: 1 },
+        { titulo_evento: "Nascimento", data_evento: "1957-10-05", descricao: "Nasceu na região de São Manuel, em São Paulo, trazendo alegria aos seus pais e irmãos.", ordem: 1 },
         { titulo_evento: "Mudança para Sergipe", data_evento: "1967-01-01", descricao: "Aos dez anos de idade, mudou-se com a família para o povoado Auricurizeira, em Gararu, Sergipe.", ordem: 2 },
         { titulo_evento: "História com Alfredo", data_evento: "1977-01-01", descricao: "Conheceu Alfredo, o grande amor de sua vida, iniciando uma história compartilhada de muito carinho.", ordem: 3 },
         { titulo_evento: "Casamento com Alfredo", data_evento: "1980-01-01", descricao: "Uniu-se em matrimônio com Alfredo, dando início a uma linda história de família.", ordem: 4 },

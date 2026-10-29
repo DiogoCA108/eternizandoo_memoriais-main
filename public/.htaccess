@@ -81,9 +81,9 @@
   RewriteRule ^m/g85guy/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
 
   # 000010
-  # CLIENTE: PROSPECÇÃO FUNERÁRIAS 24/07
+  # CLIENTE: maria-neuza-lima-10-06-2022
   # CODIGO: d6gndf
-  RewriteRule ^m/d6gndf/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
+  RewriteRule ^m/d6gndf/?$ https://www.eternizandoo.com/memorial/maria-neuza-lima-10-06-2022 [R=302,L,NE]
 
   # 000011
   # CLIENTE: PROSPECÇÃO FUNERÁRIAS 24/07

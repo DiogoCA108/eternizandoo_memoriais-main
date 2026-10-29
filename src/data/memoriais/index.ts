@@ -1,4 +1,4 @@
-import { joaoData } from "./joao";
+﻿import { joaoData } from "./joao";
 import { desafio16kmData } from "./16km";
 import type { MemorialData } from "./types";
 import { _000002_manoel_fv4ffc } from "./000002_manoel_fv4ffc";
@@ -10,6 +10,7 @@ import { _000007_sandro_qvnu4b } from "./000007_sandro_qvnu4b";
 import { _000005_jucia_48qk95 } from "./000005_jucia_48qk95";
 import { _000006_marlos_c8tagv } from "./000006_marlos_c8tagv";
 import { _000008_marizete_g85guy } from "./000008_marizete_g85guy";
+import { _000010_mariaNeuza_d6gndf } from "./000010_mariaNeuza_d6gndf";
 
 // Para adicionar um novo memorial:
 // 1. Crie o arquivo de dados do memorial copiando o "_template.ts"
@@ -30,4 +31,5 @@ export const memoriais: Record<string, MemorialData> = {
     "000005_jucia_48qk95": _000005_jucia_48qk95,
     "000006_marlos_c8tagv": _000006_marlos_c8tagv,
     "000008_marizete_g85guy": _000008_marizete_g85guy,
+    "000010_mariaNeuza_d6gndf": _000010_mariaNeuza_d6gndf,
 };  
