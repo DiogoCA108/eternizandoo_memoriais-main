@@ -1,6 +1,7 @@
 import { AnimatedSection } from "./AnimatedSection";
 import ScrollIndicator from "./ScrollIndicator";
-import { Cross } from "lucide-react";
+import { Cross, PawPrint } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface HeroSectionProps {
   nome: string;
@@ -9,6 +10,7 @@ interface HeroSectionProps {
   frase: string;
   heroImage: string;
   profilePhoto: string;
+  subtitulo?: string;
 }
 
 const formatDate = (dateStr: string) => {
@@ -27,7 +29,10 @@ export const HeroSection = ({
   frase,
   heroImage,
   profilePhoto,
+  subtitulo,
 }: HeroSectionProps) => {
+  const L = useLabels();
+  const isPet = L.tipo === "pet";
   const scrollDown = () => {
     document.getElementById("biografia")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -51,28 +56,49 @@ export const HeroSection = ({
       <div className="relative z-10 text-center px-4 max-w-3xl my-auto">
         <AnimatedSection delay={0.1}>
           <div className="flex justify-center mb-2 md:mb-3">
-            <Cross className="w-9 h-9 md:w-8 md:h-8 text-gold-light opacity-80" />
+            {isPet ? (
+              <PawPrint className="w-9 h-9 md:w-8 md:h-8 text-gold-light opacity-80" />
+            ) : (
+              <Cross className="w-9 h-9 md:w-8 md:h-8 text-gold-light opacity-80" />
+            )}
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
           <p className="text-gold-light/100 text-sm tracking-[0.25em] md:tracking-[0.3em] uppercase mb-3 md:mb-10 font-body [text-shadow:0_2px_4px_rgba(0,0,0,0.35)]">
-            In Memoriam
+            {L.hero.lema}
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.25}>
           <div className="flex justify-center mb-5 md:mb-10">
-            <div className="relative w-56 h-72 md:w-64 md:h-80 scale-100 md:scale-[1.15]">
-              {/* Outer sacred frame */}
-              <div className="absolute inset-0 rounded-[50%] border-2 border-gold-light/70 shadow-[0_0_30px_rgba(180,150,80,0.35),0_8px_24px_rgba(0,0,0,0.4)]" />
-              {/* Inner frame line */}
-              <div className="absolute inset-[5px] rounded-[50%] border border-gold/50" />
-              {/* Photo */}
-              <div className="absolute inset-[10px] rounded-[50%] overflow-hidden">
-                <img src={profilePhoto} alt="Foto de perfil" className="w-full h-full object-cover" />
+            {isPet ? (
+              <div className="relative w-52 h-52 md:w-60 md:h-60 scale-100 md:scale-[1.15]">
+                {/* Moldura externa circular */}
+                <div className="absolute inset-0 rounded-full border-2 border-gold-light/80 shadow-[0_0_30px_rgba(70,170,160,0.4),0_8px_24px_rgba(0,0,0,0.4)]" />
+                {/* Linha interna */}
+                <div className="absolute inset-[5px] rounded-full border border-gold/50" />
+                {/* Foto (levemente enquadrada para cima, para preservar o rosto) */}
+                <div className="absolute inset-[10px] rounded-full overflow-hidden">
+                  <img src={profilePhoto} alt="Foto de perfil" className="w-full h-full object-cover object-[50%_35%]" />
+                </div>
+                {/* Selo da patinha */}
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary border-2 border-gold-light/80 shadow-lg flex items-center justify-center">
+                  <PawPrint className="w-5 h-5 text-primary-foreground" />
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="relative w-56 h-72 md:w-64 md:h-80 scale-100 md:scale-[1.15]">
+                {/* Outer sacred frame */}
+                <div className="absolute inset-0 rounded-[50%] border-2 border-gold-light/70 shadow-[0_0_30px_rgba(180,150,80,0.35),0_8px_24px_rgba(0,0,0,0.4)]" />
+                {/* Inner frame line */}
+                <div className="absolute inset-[5px] rounded-[50%] border border-gold/50" />
+                {/* Photo */}
+                <div className="absolute inset-[10px] rounded-[50%] overflow-hidden">
+                  <img src={profilePhoto} alt="Foto de perfil" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            )}
           </div>
         </AnimatedSection>
 
@@ -83,15 +109,23 @@ export const HeroSection = ({
           </h1>
         </AnimatedSection>
 
+        {subtitulo && (
+          <AnimatedSection delay={0.35}>
+            <p className="text-white/95 text-sm md:text-base font-body tracking-wide mb-2 md:mb-3 [text-shadow:0_2px_4px_rgba(0,0,0,0.45)]">
+              {subtitulo}
+            </p>
+          </AnimatedSection>
+        )}
+
         <AnimatedSection delay={0.4}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-4 text-[#1C3A5C] text-base md:text-lg font-body mb-3 md:mb-4 [text-shadow:0_2px_4px_rgba(0,0,0,0.35)]">
             <span className="flex items-center gap-2">
-              <span className="text-xl font-light">☆</span>
+              <span className="text-xl font-light">{L.hero.simboloNascimento}</span>
               <span className="whitespace-nowrap">{formatDate(nascimento)}</span>
             </span>
             <span className="hidden sm:block w-8 h-0.5 bg-[#1C3A5C]/70 shadow-[0_2px_4px_rgba(0,0,0,0.35)]" />
             <span className="flex items-center gap-2">
-              <span className="text-xl text-[#1C3A5C] font-light">†</span>
+              <span className="text-xl text-[#1C3A5C] font-light">{L.hero.simboloFalecimento}</span>
               <span className="whitespace-nowrap">{formatDate(falecimento)}</span>
             </span>
           </div>

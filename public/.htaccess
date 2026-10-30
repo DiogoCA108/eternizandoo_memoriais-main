@@ -91,6 +91,21 @@
   RewriteRule ^m/72qbxe/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
 
   # ==========================
+  # PETS  (rota /memorial/pet/...)
+  # ==========================
+
+  # MODELO PET (copiar e editar)
+  # PET: 000001 (nome-do-pet-dd-mm-aaaa)
+  # CODIGO: xxxxxx
+  # RewriteRule ^m/CODIGO/?$ https://www.eternizandoo.com/memorial/pet/slug-do-pet [R=302,L,NE]
+
+  # 000001
+  # PET: bybow-07-12-2019
+  # CODIGO: 5cz3ua
+  RewriteRule ^m/5cz3ua/?$ https://www.eternizandoo.com/memorial/pet/bybow-07-12-2019 [R=302,L,NE]
+
+
+  # ==========================
   # FALLBACK DO SITE (SPA)
   # ==========================
 

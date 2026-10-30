@@ -20,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Navigate to="/memorial" replace />} />
           <Route path="/memorial" element={<LandingPage />} />
           <Route path="/memorial/:slug" element={<MemorialPage />} />
+          <Route path="/memorial/pet/:slug" element={<MemorialPage tipoRota="pet" />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -18,6 +18,9 @@ A estrutura básica lá dentro é a seguinte:
   {/* A página dos memoriais */}
   <Route path="/memorial/:slug" element={<MemorialPage />} />
 
+  {/* A página dos memoriais de pets (registro e contagem próprios) */}
+  <Route path="/memorial/pet/:slug" element={<MemorialPage tipoRota="pet" />} />
+
   {/* Página de "Não Encontrado" (Erro 404) para links inválidos */}
   <Route path="*" element={<NotFound />} />
 </Routes>
@@ -44,3 +47,7 @@ Note que a rota utiliza o formato `/memorial/:slug`. Esse termo `:slug` atua com
 - **A URL final:** É definida apenas e exclusivamente pela propriedade interna `slug: "URL_FINAL"` dentro do arquivo de dados de cada memorial, dando total liberdade de organização no código.
 
 Qualquer memorial novo inserido no array do `index.ts` automaticamente ganha vida própria na URL sem necessidade de modificar nada no `App.tsx`!
+
+## 🐾 Rota dos Memoriais Pet
+
+Pets usam a rota `/memorial/pet/:slug` e um registro próprio. Todos os detalhes estão em [memorial-pet-guia-completo.md](./memorial-pet-guia-completo.md).

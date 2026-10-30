@@ -1,5 +1,6 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { BookOpen } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface BiographySectionProps {
   texto: string;
@@ -9,9 +10,12 @@ interface BiographySectionProps {
 
 export const BiographySection = ({
   texto,
-  titulo = "História de Vida",
-  subtitulo = "Uma vida de amor"
+  titulo: tituloProp,
+  subtitulo: subtituloProp
 }: BiographySectionProps) => {
+  const L = useLabels();
+  const titulo = tituloProp ?? L.biografia.titulo;
+  const subtitulo = subtituloProp ?? L.biografia.subtitulo;
   const paragraphs = texto.split("\n\n");
 
   return (

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatedSection } from "./AnimatedSection";
 import { MapPin, Clock, ExternalLink, X, ZoomIn } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface LocationData {
   endereco: string;
@@ -16,6 +17,7 @@ interface LocationSectionProps {
 }
 
 export const LocationSection = ({ localizacao }: LocationSectionProps) => {
+  const L = useLabels();
   const [isPhotoOpen, setIsPhotoOpen] = useState(false);
 
   return (
@@ -26,9 +28,9 @@ export const LocationSection = ({ localizacao }: LocationSectionProps) => {
             <MapPin className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Um lugar para visitar
+            {L.localizacao.kicker}
           </p>
-          <h2 className="section-title">Localização do Túmulo</h2>
+          <h2 className="section-title">{L.localizacao.titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 

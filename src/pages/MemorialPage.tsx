@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { memoriais } from "@/data/memoriais";
+import { pets } from "@/data/memoriais/pets";
 import { MemorialData } from "@/data/memoriais/types";
 import { MemorialNav } from "@/components/MemorialNav";
 import { HeroSection } from "@/components/HeroSection";
@@ -16,13 +17,20 @@ import { FooterSection } from "@/components/FooterSection";
 import { SectionDivider } from "@/components/SectionDivider";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SoundtrackPlayer } from "@/components/SoundtrackPlayer";
+import { LabelsContext, getLabels } from "@/lib/memorialLabels";
 
-const MemorialPage = () => {
+interface MemorialPageProps {
+    // "pessoa" -> /memorial/:slug  |  "pet" -> /memorial/pet/:slug
+    tipoRota?: "pessoa" | "pet";
+}
+
+const MemorialPage = ({ tipoRota = "pessoa" }: MemorialPageProps) => {
     const { slug } = useParams();
     const [isSoundtrackPlaying, setIsSoundtrackPlaying] = useState(true);
 
-    // Procura na lista de memoriais qual deles tem a propriedade 'slug' igual à URL atual
-    const data = Object.values(memoriais).find(m => m?.slug === slug);
+    // Procura na lista (pessoas ou pets, conforme a rota) qual memorial tem a propriedade 'slug' igual à URL atual
+    const lista = tipoRota === "pet" ? pets : memoriais;
+    const data = Object.values(lista).find(m => m?.slug === slug);
 
     // Se não passar slug ou o memorial não for encontrado, redireciona para o 404
     if (!slug || !data) {
@@ -37,8 +45,14 @@ const MemorialPage = () => {
         return true;
     };
 
+    const isPet = tipoRota === "pet";
+    const labels = getLabels(tipoRota);
+    // Ex: "Cachorro • Shih Tzu" (só aparece se espécie/raça forem preenchidas)
+    const subtituloPet = isPet ? [data.especie, data.raca, data.genero === "M" ? "Macho" : data.genero === "F" ? "Fêmea" : ""].filter(Boolean).join(" • ") : "";
+
     return (
-        <div className="min-h-screen bg-background">
+        <LabelsContext.Provider value={labels}>
+        <div className={`min-h-screen bg-background ${isPet ? "theme-pet" : ""}`}>
             <MemorialNav />
 
             {/* Hero */}
@@ -50,6 +64,7 @@ const MemorialPage = () => {
                     nascimento={data.data_nascimento}
                     falecimento={data.data_falecimento}
                     frase={data.frase_homenagem}
+                    subtitulo={subtituloPet || undefined}
                 />
             </div>
 
@@ -79,8 +94,8 @@ const MemorialPage = () => {
                     <PhotoGallery
                         photos={data.galeria.map((g) => ({ src: g.url, caption: g.legenda }))}
                         visibleCount={7}
-                        title={`Galeria de Memórias`}
-                        subtitle="Momentos eternos"
+                        title={labels.galeria.titulo}
+                        subtitle={labels.galeria.subtitulo}
                     />
                 </div>
             )}
@@ -117,7 +132,7 @@ const MemorialPage = () => {
             {/* bg-card (light) - Homenagens + divider */}
             {isAtivo('homenagens') && (
                 <div id="homenagens" className="bg-card">
-                    <TributesSection homenagens={data.homenagens || []} slug={data.slug} />
+                    <TributesSection homenagens={data.homenagens || []} slug={isPet ? `pet/${data.slug}` : data.slug} />
                     <SectionDivider />
                 </div>
             )}
@@ -132,13 +147,13 @@ const MemorialPage = () => {
             {/* Family Dedication */}
             <AnimatedSection>
                 <div className="py-12 text-center bg-background">
-                    <div className="flex justify-center gap-3 text-[#B07A2C]/90 text-[19px] mb-2">
+                    <div className={`flex justify-center gap-3 ${isPet ? "text-primary" : "text-[#B07A2C]/90"} text-[19px] mb-2`}>
                         <span>✦</span>
                         <span>✦</span>
                         <span>✦</span>
                     </div>
                     <p className="font-display text-xl md:text-2xl text-foreground/70 italic">
-                        {data.dedicatoria || "Com amor eterno, a família"}
+                        {data.dedicatoria || labels.dedicatoria}
                     </p>
                 </div>
             </AnimatedSection>
@@ -154,6 +169,7 @@ const MemorialPage = () => {
                 />
             )}
         </div>
+        </LabelsContext.Provider>
     );
 };
 

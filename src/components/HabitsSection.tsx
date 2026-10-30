@@ -1,6 +1,7 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { useState } from "react";
 import { Coffee, UtensilsCrossed, Heart, Quote, Fingerprint } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface Habito {
   tipo: string;
@@ -11,15 +12,15 @@ interface HabitsSectionProps {
   habitos: Habito[];
 }
 
-const categories = [
-  { key: "bebida", label: "Bebidas", icon: Coffee },
-  { key: "comida", label: "Comidas", icon: UtensilsCrossed },
-  { key: "habito", label: "Hábitos", icon: Heart },
-  { key: "frase", label: "Frases", icon: Quote },
-];
-
 export const HabitsSection = ({ habitos }: HabitsSectionProps) => {
-  const [active, setActive] = useState("bebida");
+  const L = useLabels();
+  const categories = [
+    { key: "bebida", label: L.habitos.bebida, icon: Coffee },
+    { key: "comida", label: L.habitos.comida, icon: UtensilsCrossed },
+    { key: "habito", label: L.habitos.habito, icon: Heart },
+    { key: "frase", label: L.habitos.frase, icon: Quote },
+  ].filter((c) => c.label);
+  const [active, setActive] = useState(categories[0]?.key ?? "comida");
   const filtered = habitos.filter((h) => h.tipo === active);
 
   return (
@@ -30,9 +31,9 @@ export const HabitsSection = ({ habitos }: HabitsSectionProps) => {
             <Fingerprint className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Pequenos detalhes
+            {L.habitos.kicker}
           </p>
-          <h2 className="section-title">Hábitos, Manias e Frases</h2>
+          <h2 className="section-title">{L.habitos.titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 

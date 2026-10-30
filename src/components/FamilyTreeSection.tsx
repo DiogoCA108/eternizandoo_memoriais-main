@@ -1,5 +1,6 @@
 import { AnimatedSection } from "./AnimatedSection";
-import { User, Heart, Users, Network, Cross } from "lucide-react";
+import { User, Heart, Users, Network, Cross, PawPrint } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface FamilyMember {
   nome: string;
@@ -22,6 +23,10 @@ const groupConfigs = {
   netos: { key: "netos", label: "Netos", icon: Users, filter: (m: FamilyMember) => m.relacao === "neto" || m.relacao === "neta" },
   bisnetos: { key: "bisnetos", label: "Bisnetos", icon: Users, filter: (m: FamilyMember) => m.relacao === "bisneto" || m.relacao === "bisneta" },
   sobrinhos: { key: "sobrinhos", label: "Sobrinhas e Sobrinhos", icon: Users, filter: (m: FamilyMember) => m.relacao === "sobrinho" || m.relacao === "sobrinha" },
+  // --- Modo pet ---
+  tutores: { key: "tutores", label: "Tutores", icon: Heart, filter: (m: FamilyMember) => m.relacao.toLowerCase() === "tutor" || m.relacao.toLowerCase() === "tutora" },
+  familia: { key: "familia", label: "Família", icon: Users, filter: (m: FamilyMember) => m.relacao.toLowerCase() === "familia" || m.relacao.toLowerCase() === "família" },
+  companheiros: { key: "companheiros", label: "Companheiros de Patinhas", icon: PawPrint, filter: (m: FamilyMember) => ["companheiro", "companheira", "pet"].includes(m.relacao.toLowerCase()) },
 };
 
 const getInitials = (name: string) => {
@@ -38,7 +43,14 @@ const getFirstName = (name: string) => {
 };
 
 export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", generoMemorial = "F" }: FamilyTreeSectionProps) => {
-  const conjuge = membros.find((m) => m.relacao.toLowerCase() === "conjuge" || m.relacao.toLowerCase() === "cônjuge");
+  const L = useLabels();
+  const isPet = L.tipo === "pet";
+  const conjuge = isPet ? undefined : membros.find((m) => m.relacao.toLowerCase() === "conjuge" || m.relacao.toLowerCase() === "cônjuge");
+  const preGroups = isPet ? [groupConfigs.tutores] : [groupConfigs.avos, groupConfigs.pais, groupConfigs.irmaos];
+  const postGroups = isPet
+    ? [groupConfigs.familia, groupConfigs.companheiros]
+    : [groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos, groupConfigs.sogros, groupConfigs.sobrinhos];
+  const firstPostKey = postGroups.find((c) => membros.some(c.filter))?.key;
 
   // Se o memorial for de um homem, a cor da linhagem dele é Azul e o da esposa é Dourado
   const isMemorialMan = generoMemorial === "M";
@@ -89,15 +101,15 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
             <Network className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Raízes de amor
+            {L.familia.kicker}
           </p>
-          <h2 className="section-title">Árvore Genealógica</h2>
+          <h2 className="section-title">{L.familia.titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 
         <div className="mt-8 md:mt-12 max-w-2xl mx-auto px-2">
           {/* Pre-memorial groups */}
-          {[groupConfigs.avos, groupConfigs.pais, groupConfigs.irmaos].map((config) => {
+          {preGroups.map((config) => {
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>
@@ -120,8 +132,8 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
                 </div>
                 <p className="font-display text-foreground font-semibold text-xs sm:text-base leading-tight">{getFirstName(nomeMemorial)}</p>
                 <div className="flex items-center justify-center gap-1 sm:gap-1.5 mt-1">
-                  <Cross className="w-3 h-3 text-primary/50" />
-                  <p className="text-muted-foreground text-[9px] sm:text-xs font-body">In Memoriam</p>
+                  {isPet ? <PawPrint className="w-3 h-3 text-primary/50" /> : <Cross className="w-3 h-3 text-primary/50" />}
+                  <p className="text-muted-foreground text-[9px] sm:text-xs font-body">{L.familia.tagMemorial}</p>
                 </div>
               </div>
 
@@ -150,11 +162,11 @@ export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", gene
           </AnimatedSection>
 
           {/* Post-memorial groups */}
-          {[groupConfigs.filhos, groupConfigs.netos, groupConfigs.bisnetos, groupConfigs.sogros, groupConfigs.sobrinhos].map((config, idx) => {
+          {postGroups.map((config, idx) => {
             if (!membros.some(config.filter)) return null;
             return (
               <div key={config.key}>
-                {config.key === "filhos" && (
+                {(isPet ? config.key === firstPostKey : config.key === "filhos") && (
                   <div className="flex justify-center">
                     <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-transparent via-primary/60 to-primary/20" />
                   </div>
@@ -211,7 +223,11 @@ function renderGroup(
           return (
             <div key={m.nome} className="text-center p-2 sm:p-4 min-w-[80px] sm:min-w-[100px] relative group transition-transform duration-300 hover:-translate-y-1 cursor-default">
               <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full border flex items-center justify-center mx-auto mb-2 transition-all duration-300 relative ${visuals.bg}`}>
-                <User className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${visuals.icon}`} />
+                {config.key === "companheiros" ? (
+                  <PawPrint className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${visuals.icon}`} />
+                ) : (
+                  <User className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${visuals.icon}`} />
+                )}
                 {visuals.badge}
               </div>
               <p className="font-display text-foreground text-xs sm:text-sm font-medium">

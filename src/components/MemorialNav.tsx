@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
-
-const navItems = [
-  { label: "Início", href: "#" },
-  { label: "História", href: "#biografia" },
-  { label: "Galeria", href: "#galeria" },
-  { label: "Homenagens", href: "#homenagens" },
-];
+import { useLabels } from "@/lib/memorialLabels";
 
 export const MemorialNav = () => {
+  const L = useLabels();
+  const navItems = [
+    { label: L.nav.inicio, href: "#" },
+    { label: L.nav.historia, href: "#biografia" },
+    { label: L.nav.galeria, href: "#galeria" },
+    { label: L.nav.homenagens, href: "#homenagens" },
+  ];
   const [scrollOpacity, setScrollOpacity] = useState(0);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ export const MemorialNav = () => {
     <nav
       className="fixed top-0 left-0 right-0 z-40 transition-shadow duration-500"
       style={{
-        backgroundColor: `hsla(40, 30%, 98%, ${scrollOpacity})`,
+        backgroundColor: `hsl(var(--card) / ${scrollOpacity})`,
         backdropFilter: hasScrolled ? `blur(${Math.min(scrollOpacity * 12, 10)}px)` : "none",
         boxShadow: hasScrolled ? `0 1px 3px rgba(0,0,0,${scrollOpacity * 0.08})` : "none",
       }}
@@ -34,9 +35,9 @@ export const MemorialNav = () => {
       <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
         <span
           className="font-display text-sm transition-colors duration-300"
-          style={{ color: hasScrolled ? "hsl(220, 30%, 15%)" : "hsla(40, 33%, 96%, 0.8)" }}
+          style={{ color: hasScrolled ? "hsl(var(--foreground))" : "hsla(40, 33%, 96%, 0.8)" }}
         >
-          Memorial Eterno
+          {L.nav.marca}
         </span>
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
@@ -45,7 +46,7 @@ export const MemorialNav = () => {
               href={item.href}
               className="font-body text-xs tracking-wide transition-colors duration-300 hover:text-primary"
               style={{
-                color: hasScrolled ? "hsl(220, 10%, 45%)" : "hsla(40, 33%, 96%, 0.7)",
+                color: hasScrolled ? "hsl(var(--muted-foreground))" : "hsla(40, 33%, 96%, 0.7)",
               }}
             >
               {item.label}

@@ -1,6 +1,7 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { useState, useEffect } from "react";
 import { MessageCircle, X, MessageCircleHeart } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface Homenagem {
   nome: string;
@@ -15,6 +16,7 @@ interface TributesSectionProps {
 }
 
 export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
+  const L = useLabels();
   const [modalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({ nome: "", vinculo: "", mensagem: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -86,9 +88,9 @@ export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
             <MessageCircleHeart className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Palavras de carinho
+            {L.homenagens.kicker}
           </p>
-          <h2 className="section-title">Mensagens e Homenagens</h2>
+          <h2 className="section-title">{L.homenagens.titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 
@@ -134,9 +136,9 @@ export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
             <div className="flex justify-center mb-4">
               <MessageCircle className="w-10 h-10 text-primary" />
             </div>
-            <h3 className="font-display text-xl text-foreground mb-1">Deixe sua Homenagem</h3>
+            <h3 className="font-display text-xl text-foreground mb-1">{L.homenagens.ctaTitulo}</h3>
             <p className="text-muted-foreground font-body text-sm mb-6">
-              Compartilhe suas memórias e mensagens de carinho
+              {L.homenagens.ctaTexto}
             </p>
             <button
               onClick={() => setModalOpen(true)}
@@ -170,7 +172,7 @@ export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
                 </div>
                 <h3 className="font-display text-2xl text-foreground mb-2 font-bold">Homenagem enviada!</h3>
                 <p className="text-muted-foreground font-body text-sm mb-8">
-                  Obrigado por compartilhar suas memórias. Sua mensagem passará por uma análise de carinho e <span className="text-foreground font-semibold">aparecerá no memorial assim que for aprovada</span>.
+                  Obrigado por compartilhar suas memórias. Sua mensagem passará por uma análise de carinho e <span className="text-foreground font-semibold">{L.homenagens.sucessoDestaque}</span>.
                 </p>
                 <button
                   onClick={() => {
@@ -184,9 +186,9 @@ export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
               </div>
             ) : (
               <div>
-                <h3 className="font-display text-2xl text-foreground mb-2">Deixe sua homenagem</h3>
+                <h3 className="font-display text-2xl text-foreground mb-2">{L.homenagens.modalTitulo}</h3>
                 <p className="text-muted-foreground font-body text-sm mb-6">
-                  Compartilhe uma mensagem em memória de Maria Helena.
+                  {L.homenagens.modalTexto}
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>

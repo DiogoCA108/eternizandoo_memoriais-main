@@ -63,7 +63,7 @@ export const PhotoGallery = ({
   }, [lightboxOpen, closeLightbox, navigate]);
 
   return (
-    <section className="memorial-section bg-[hsl(36_20%_82%)] pb-0.5">
+    <section className="memorial-section bg-[hsl(var(--gallery-bg))] pb-0.5">
       <div className="memorial-container">
         {/* Header */}
         <AnimatedSection>

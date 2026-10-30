@@ -1,5 +1,6 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { Music, Headphones, Play, Pause } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface TrilhaSonora {
   titulo: string;
@@ -21,6 +22,7 @@ interface MusicSectionProps {
 }
 
 export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtrack }: MusicSectionProps) => {
+  const L = useLabels();
   const hasTrilhaSonora = trilhaSonora && trilhaSonora.titulo;
   const hasMusicas = musicas && musicas.length > 0;
 
@@ -34,9 +36,9 @@ export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtr
             <Music className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Melodias da alma
+            {L.musica.kicker}
           </p>
-          <h2 className="section-title">Trilha Sonora e Canções</h2>
+          <h2 className="section-title">{L.musica.titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 
@@ -48,7 +50,7 @@ export const MusicSection = ({ trilhaSonora, musicas, isPlaying, onToggleSoundtr
                 <div className="flex items-center gap-2.5 mb-3">
                   <Headphones className="w-4 h-4 text-primary/80" />
                   <h3 className="font-display text-lg sm:text-xl text-foreground font-medium">
-                    Trilha sonora deste memorial
+                    {L.musica.trilha}
                   </h3>
                 </div>
                 

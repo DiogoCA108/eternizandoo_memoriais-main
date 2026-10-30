@@ -1,6 +1,13 @@
 export interface MemorialData {
     slug: string;
 
+    // O tipo (pessoa/pet) é definido pela rota e pelo registro: pets ficam em src/data/memoriais/pets/
+    // e são acessados em /memorial/pet/:slug
+
+    // Apenas para pets (opcionais) — aparecem abaixo do nome, ex: "Cachorro • Shih Tzu"
+    especie?: string;
+    raca?: string;
+
     // Configuração opcional de quais seções exibir (se omitido, o padrão é exibir o que tem dados)
     secoes_ativas?: {
         biografia?: boolean;
@@ -43,6 +50,8 @@ export interface MemorialData {
         artista: string;
         contexto?: string;
     }>;
+    // relacao (pessoa): pai, mãe, irmão, cônjuge, filho, neto...
+    // relacao (pet): "tutor" | "tutora" (tutores), "familia" (demais da família), "companheiro" | "companheira" (outros pets)
     arvore_genealogica?: Array<{ nome: string; relacao: string; parentesco?: "memorial" | "conjuge" | "ambos" }>;
     linha_tempo?: Array<{ titulo_evento: string; data_evento: string; descricao: string; ordem: number }>;
     homenagens?: Array<{ nome: string; vinculo: string; mensagem: string; data: string }>;

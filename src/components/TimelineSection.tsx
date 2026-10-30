@@ -1,5 +1,6 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { Hourglass } from "lucide-react";
+import { useLabels } from "@/lib/memorialLabels";
 
 interface TimelineEvent {
   titulo_evento: string;
@@ -18,6 +19,7 @@ const formatYear = (dateStr?: string) => {
 };
 
 export const TimelineSection = ({ eventos }: TimelineSectionProps) => {
+  const L = useLabels();
   const sorted = [...eventos].sort((a, b) => a.ordem - b.ordem);
 
   return (
@@ -28,9 +30,9 @@ export const TimelineSection = ({ eventos }: TimelineSectionProps) => {
             <Hourglass className="w-7 h-7 text-primary/60" />
           </div>
           <p className="text-primary text-sm tracking-[0.3em] uppercase text-center mb-2 font-body">
-            Uma jornada de vida
+            {L.timeline.kicker}
           </p>
-          <h2 className="section-title">Linha do Tempo</h2>
+          <h2 className="section-title">{L.timeline.titulo}</h2>
           <div className="section-divider" />
         </AnimatedSection>
 
