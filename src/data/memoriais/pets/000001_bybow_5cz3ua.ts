@@ -14,7 +14,7 @@ export const _000001_bybow_5cz3ua: MemorialData = {
         biografia: true,
         habitos: true,
         galeria: true,
-        musicas: false, // ativar quando houver músicas/trilha sonora
+        musicas: true,
         arvore_genealogica: true,
         linha_tempo: true,
         homenagens: true,
@@ -65,7 +65,15 @@ A minha passagem foi de muito amor aqui na terra.`,
         { tipo: "foto", url: "/fotos/pets/000001_bybow_5cz3ua/gallery/foto_09.jpg", legenda: "" },
     ],
 
-    musicas: [],
+    trilha_sonora: {
+        titulo: "Somewhere Over the Rainbow",
+        descricao: "Israel Kamakawiwo'ole",
+        url_audio: "/trilhas_sonoras/pets/000001_bybow_5cz3ua.mp3"
+    },
+
+    musicas: [
+        { titulo: "Somewhere Over the Rainbow", artista: "Israel Kamakawiwo'ole", contexto: "Uma canção para o nosso Bybow, que agora brinca do outro lado do arco-íris." },
+    ],
 
     arvore_genealogica: [
         { nome: "Mário Sérgio", relacao: "tutor" },
@@ -88,4 +96,5 @@ A minha passagem foi de muito amor aqui na terra.`,
         foto_url: "",
     },
 };
+
 

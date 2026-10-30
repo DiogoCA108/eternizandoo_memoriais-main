@@ -44,10 +44,27 @@ export const HeroSection = ({
         <img
           src={heroImage}
           alt="Memorial"
-          className="w-full h-full object-cover saturate-80 brightness-95 contrast-105"
+          className={`w-full h-full object-cover ${
+            isPet ? "saturate-90 brightness-100 contrast-100" : "saturate-80 brightness-95 contrast-105"
+          }`}
         />
-        {/* Camada dourada geral */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#d6b98c]/35 via-[#d6b98c]/15 to-[#d6b98c]/15" />
+        {isPet ? (
+          <>
+            {/* Filtro verde-água quente (pets) */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#2f8f8a]/22 via-[#4fb3a9]/10 to-[#d6b98c]/15" />
+            {/* Patinhas discretas em marca d'água */}
+            <div
+              className="absolute inset-0 opacity-[0.07] pointer-events-none"
+              style={{
+                backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 24 24' fill='white'><g transform='rotate(-20 12 12) scale(0.8) translate(3 3)'><ellipse cx='12' cy='16' rx='4.5' ry='3.6'/><ellipse cx='6.5' cy='10.5' rx='1.9' ry='2.5'/><ellipse cx='10' cy='6.5' rx='1.9' ry='2.5'/><ellipse cx='14.5' cy='6.5' rx='1.9' ry='2.5'/><ellipse cx='18' cy='10.5' rx='1.9' ry='2.5'/></g></svg>")`,
+                backgroundSize: "260px 260px",
+              }}
+            />
+          </>
+        ) : (
+          /* Camada dourada geral */
+          <div className="absolute inset-0 bg-gradient-to-b from-[#d6b98c]/35 via-[#d6b98c]/15 to-[#d6b98c]/15" />
+        )}
         {/* Camada escura apenas no topo ok */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/5 to-transparent" />
       </div>
