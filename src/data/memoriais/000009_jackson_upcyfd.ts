@@ -18,6 +18,8 @@ export const _000009_jackson_upcyfd: MemorialData = {
     // --- IMAGENS PRINCIPAIS ---
     heroImage: "/fotos/000009_jackson_upcyfd/hero.jpg",
     profilePhoto: "/fotos/000009_jackson_upcyfd/profile.jpg",
+    foto_perfil_posicao: "object-top",
+    foto_perfil_style: { objectPosition: "50% 0%" },
 
     // --- DADOS BÁSICOS ---
     nome_completo: "Jackson Soares dos Santos",

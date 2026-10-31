@@ -23,6 +23,8 @@ export interface MemorialData {
     // Imagens principais
     heroImage: string;
     profilePhoto: string;
+    foto_perfil_posicao?: string;
+    foto_perfil_style?: import("react").CSSProperties;
 
     // Dados básicos
     nome_completo: string;

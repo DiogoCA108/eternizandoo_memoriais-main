@@ -11,6 +11,8 @@ interface HeroSectionProps {
   heroImage: string;
   profilePhoto: string;
   subtitulo?: string;
+  fotoPerfilPosicao?: string;
+  fotoPerfilStyle?: React.CSSProperties;
 }
 
 const formatDate = (dateStr: string) => {
@@ -30,6 +32,8 @@ export const HeroSection = ({
   heroImage,
   profilePhoto,
   subtitulo,
+  fotoPerfilPosicao,
+  fotoPerfilStyle,
 }: HeroSectionProps) => {
   const L = useLabels();
   const isPet = L.tipo === "pet";
@@ -112,7 +116,12 @@ export const HeroSection = ({
                 <div className="absolute inset-[5px] rounded-[50%] border border-gold/50" />
                 {/* Photo */}
                 <div className="absolute inset-[10px] rounded-[50%] overflow-hidden">
-                  <img src={profilePhoto} alt="Foto de perfil" className="w-full h-full object-cover" />
+                  <img
+                    src={profilePhoto}
+                    alt="Foto de perfil"
+                    className={`w-full h-full object-cover ${fotoPerfilPosicao || ""}`}
+                    style={fotoPerfilStyle}
+                  />
                 </div>
               </div>
             )}

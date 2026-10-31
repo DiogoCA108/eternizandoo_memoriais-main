@@ -65,6 +65,8 @@ const MemorialPage = ({ tipoRota = "pessoa" }: MemorialPageProps) => {
                     falecimento={data.data_falecimento}
                     frase={data.frase_homenagem}
                     subtitulo={subtituloPet || undefined}
+                    fotoPerfilPosicao={data.foto_perfil_posicao}
+                    fotoPerfilStyle={data.foto_perfil_style}
                 />
             </div>
 
