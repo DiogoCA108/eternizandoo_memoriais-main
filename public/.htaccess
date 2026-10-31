@@ -85,6 +85,11 @@
   # CODIGO: g85guy
   RewriteRule ^m/g85guy/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
 
+  # 000009
+  # CLIENTE: jackson-soares-dos-santos-20-12-2009
+  # CODIGO: upcyfd
+  RewriteRule ^m/upcyfd/?$ https://www.eternizandoo.com/memorial/jackson-soares-dos-santos-20-12-2009 [R=302,L,NE]
+
   # 000010
   # CLIENTE: maria-neuza-lima-10-06-2022
   # CODIGO: d6gndf
