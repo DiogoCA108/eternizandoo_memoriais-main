@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { trackPixelEvent, trackWhatsAppClick } from "@/lib/metaPixel";
+import { trackPixelEvent, trackWhatsAppContact } from "@/lib/metaPixel";
 
 /**
  * Componente headless para gerenciar o rastreamento do Meta Pixel em SPA (Single Page Application):
  * 1. Rastreia PageView em mudanças de rota no React Router (evitando duplicação no carregamento inicial).
- * 2. Monitora globalmente cliques em qualquer link de WhatsApp como rede de segurança.
+ * 2. Monitora globalmente interações em qualquer link de WhatsApp como rede de segurança.
  */
 export const MetaPixelTracker = () => {
   const location = useLocation();
@@ -31,7 +31,7 @@ export const MetaPixelTracker = () => {
 
   // Listener global de contingência para qualquer link de WhatsApp
   useEffect(() => {
-    const handleDocumentClick = (event: MouseEvent) => {
+    const handlePotentialWhatsAppInteraction = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
       if (!target) return;
 
@@ -44,16 +44,21 @@ export const MetaPixelTracker = () => {
         href.includes("api.whatsapp.com") ||
         href.includes("whatsapp.com/send")
       ) {
-        trackWhatsAppClick("whatsapp_global_link");
+        trackWhatsAppContact();
       }
     };
 
-    document.addEventListener("click", handleDocumentClick, { capture: true });
+    // Escuta 'touchstart', 'mousedown' e 'click' para antecipar o disparo antes da navegação do navegador
+    document.addEventListener("touchstart", handlePotentialWhatsAppInteraction, { capture: true, passive: true });
+    document.addEventListener("mousedown", handlePotentialWhatsAppInteraction, { capture: true, passive: true });
+    document.addEventListener("click", handlePotentialWhatsAppInteraction, { capture: true, passive: true });
+
     return () => {
-      document.removeEventListener("click", handleDocumentClick, { capture: true });
+      document.removeEventListener("touchstart", handlePotentialWhatsAppInteraction, { capture: true });
+      document.removeEventListener("mousedown", handlePotentialWhatsAppInteraction, { capture: true });
+      document.removeEventListener("click", handlePotentialWhatsAppInteraction, { capture: true });
     };
   }, []);
 
   return null;
 };
-
