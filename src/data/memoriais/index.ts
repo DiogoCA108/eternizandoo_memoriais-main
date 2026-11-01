@@ -12,6 +12,7 @@ import { _000006_marlos_c8tagv } from "./000006_marlos_c8tagv";
 import { _000008_marizete_g85guy } from "./000008_marizete_g85guy";
 import { _000009_jackson_upcyfd } from "./000009_jackson_upcyfd";
 import { _000010_mariaNeuza_d6gndf } from "./000010_mariaNeuza_d6gndf";
+import { _000011_jussiline_72qbxe } from "./000011_jussiline_72qbxe";
 
 // Para adicionar um novo memorial:
 // 1. Crie o arquivo de dados do memorial copiando o "_template.ts" (pessoa) ou o "_template_pet.ts" (pet)
@@ -34,4 +35,5 @@ export const memoriais: Record<string, MemorialData> = {
     "000008_marizete_g85guy": _000008_marizete_g85guy,
     "000009_jackson_upcyfd": _000009_jackson_upcyfd,
     "000010_mariaNeuza_d6gndf": _000010_mariaNeuza_d6gndf,
+    "000011_jussiline_72qbxe": _000011_jussiline_72qbxe,
 };
