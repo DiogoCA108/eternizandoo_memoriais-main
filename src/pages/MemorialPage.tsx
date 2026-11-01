@@ -134,7 +134,11 @@ const MemorialPage = ({ tipoRota = "pessoa" }: MemorialPageProps) => {
             {/* bg-card (light) - Homenagens + divider */}
             {isAtivo('homenagens') && (
                 <div id="homenagens" className="bg-card">
-                    <TributesSection homenagens={data.homenagens || []} slug={isPet ? `pet/${data.slug}` : data.slug} />
+                    <TributesSection 
+                        homenagens={data.homenagens || []} 
+                        slug={isPet ? `pet/${data.slug}` : data.slug} 
+                        nome={data.nome_completo}
+                    />
                     <SectionDivider />
                 </div>
             )}

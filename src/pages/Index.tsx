@@ -72,7 +72,11 @@ const Index = () => {
 
       {/* bg-card (light) - Homenagens + divider */}
       <div id="homenagens" className="bg-card">
-        <TributesSection homenagens={memoriais["joao"].homenagens} slug={memoriais["joao"].slug} />
+        <TributesSection 
+          homenagens={memoriais["joao"].homenagens} 
+          slug={memoriais["joao"].slug} 
+          nome={memoriais["joao"].nome_completo}
+        />
         <SectionDivider />
       </div>
 

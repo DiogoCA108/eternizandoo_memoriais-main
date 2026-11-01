@@ -42,7 +42,7 @@ const getFirstName = (name: string) => {
   return name.split(" ")[0];
 };
 
-export const FamilyTreeSection = ({ membros, nomeMemorial = "Maria Helena", generoMemorial = "F" }: FamilyTreeSectionProps) => {
+export const FamilyTreeSection = ({ membros, nomeMemorial = "Homenageado", generoMemorial = "F" }: FamilyTreeSectionProps) => {
   const L = useLabels();
   const isPet = L.tipo === "pet";
   const conjuge = isPet ? undefined : membros.find((m) => m.relacao.toLowerCase() === "conjuge" || m.relacao.toLowerCase() === "cônjuge");

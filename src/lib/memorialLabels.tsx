@@ -118,7 +118,7 @@ export const labelsPessoa: MemorialLabels = {
     ctaTexto: "Compartilhe suas memórias e mensagens de carinho",
     sucessoDestaque: "aparecerá no memorial assim que for aprovada",
     modalTitulo: "Deixe sua homenagem",
-    modalTexto: "Compartilhe uma mensagem em memória de Maria Helena.",
+    modalTexto: "Compartilhe uma mensagem de carinho e homenagem.",
   },
 
   localizacao: { kicker: "Um lugar para visitar", titulo: "Localização do Túmulo" },

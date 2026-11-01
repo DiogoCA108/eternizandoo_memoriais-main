@@ -13,9 +13,10 @@ interface Homenagem {
 interface TributesSectionProps {
   homenagens: Homenagem[];
   slug: string;
+  nome?: string;
 }
 
-export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
+export const TributesSection = ({ homenagens, slug, nome }: TributesSectionProps) => {
   const L = useLabels();
   const [modalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({ nome: "", vinculo: "", mensagem: "" });
@@ -188,7 +189,21 @@ export const TributesSection = ({ homenagens, slug }: TributesSectionProps) => {
               <div>
                 <h3 className="font-display text-2xl text-foreground mb-2">{L.homenagens.modalTitulo}</h3>
                 <p className="text-muted-foreground font-body text-sm mb-6">
-                  {L.homenagens.modalTexto}
+                  {nome ? (
+                    L.tipo === "pet" ? (
+                      <>
+                        Compartilhe uma mensagem de carinho em memória de{" "}
+                        <strong className="font-semibold text-foreground">{nome}</strong>.
+                      </>
+                    ) : (
+                      <>
+                        Compartilhe uma mensagem em memória de{" "}
+                        <strong className="font-semibold text-foreground">{nome}</strong>.
+                      </>
+                    )
+                  ) : (
+                    L.homenagens.modalTexto
+                  )}
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
