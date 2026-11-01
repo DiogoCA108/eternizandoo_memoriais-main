@@ -29,9 +29,9 @@
   # CLIENTES REAIS
   # ==========================
 
-  # CLIENTE: eternizandoo 
+  # CLIENTE: eternizandoo (Landing Page)
   # CODIGO: akux7c
-  RewriteRule ^m/akux7c/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
+  RewriteRule ^m/akux7c/?$ https://www.eternizandoo.com/memorial [R=302,L,NE]
 
   # 000000TESTE
   # CLIENTE: maria-jose-dos-santos-17-12-2023

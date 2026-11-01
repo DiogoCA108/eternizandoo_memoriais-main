@@ -21,6 +21,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Navigate to="/memorial" replace />} />
           <Route path="/memorial" element={<LandingPage />} />
+          <Route path="/m/akux7c" element={<Navigate to="/memorial" replace />} />
+          <Route path="/akux7c" element={<Navigate to="/memorial" replace />} />
           <Route path="/memorial/:slug" element={<MemorialPage />} />
           <Route path="/memorial/pet/:slug" element={<MemorialPage tipoRota="pet" />} />
 
