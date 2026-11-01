@@ -38,7 +38,10 @@ export const FooterSection = () => {
           </a>
         </AnimatedSection>
 
-        <div className="mt-16 pt-6 border-t border-primary-foreground/10">
+        <div className="mt-16 pt-6 border-t border-primary-foreground/10 space-y-2">
+          <p className="text-primary-foreground/45 font-body text-[11px] sm:text-xs leading-relaxed max-w-2xl mx-auto">
+            Todo o conteúdo (textos, imagens e áudios) é fornecido e publicado sob exclusiva responsabilidade e autorização declarada pelo contratante, isentando a Eternizandoo de qualquer responsabilidade civil, autoral ou pela veracidade das informações veiculadas. Todos os direitos reservados aos respectivos titulares.
+          </p>
           <p className="text-primary-foreground/30 font-body text-xs">
             Memoriais Eternos © {new Date().getFullYear()} — Preservando memórias para a eternidade — Desenvolvido por Eternizandoo.
           </p>
