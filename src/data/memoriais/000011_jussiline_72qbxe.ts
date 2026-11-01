@@ -128,6 +128,6 @@ Por onde passou, deixou laços sinceros. Na rua onde morava, todos a conheciam e
         horario_visita: "",
         link_maps: "https://www.google.com/maps/search/?api=1&query=Cemit%C3%A9rio+Santos+Anjos+da+Guarda+Ribeir%C3%B3polis+SE",
         query_mapa: "Cemitério Santos Anjos da Guarda, Ribeirópolis - SE",
-        foto_url: "",
+        foto_url: "/fotos/000011_jussiline_72qbxe/tumulo.jpeg",
     },
 };
