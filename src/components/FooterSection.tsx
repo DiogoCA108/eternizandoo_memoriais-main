@@ -1,6 +1,7 @@
 import { AnimatedSection } from "./AnimatedSection";
 import { QrCode } from "lucide-react";
 import { useLabels } from "@/lib/memorialLabels";
+import { trackWhatsAppClick } from "@/lib/metaPixel";
 
 export const FooterSection = () => {
   const L = useLabels();
@@ -28,6 +29,7 @@ export const FooterSection = () => {
             href={`https://wa.me/55079999258800?text=${encodeURIComponent(L.rodape.mensagemWhatsapp)}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("memorial_footer_whatsapp")}
             className="inline-block px-8 py-3 border-2 border-gold-light/30 bg-gold-light/10 text-gold-light rounded-full font-body text-sm hover:bg-gold-light/20 hover:border-gold-light/50 transition-all font-medium shadow-sm"
           >
             {L.rodape.botao}

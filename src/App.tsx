@@ -7,6 +7,7 @@ import LandingPage from "./pages/LandingPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import MemorialPage from "./pages/MemorialPage";
+import { MetaPixelTracker } from "./components/MetaPixelTracker";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <MetaPixelTracker />
         <Routes>
           <Route path="/" element={<Navigate to="/memorial" replace />} />
           <Route path="/memorial" element={<LandingPage />} />
