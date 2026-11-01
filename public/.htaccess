@@ -58,6 +58,11 @@
   # CODIGO: fv4ffc
   RewriteRule ^m/fv4ffc/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
 
+  # 000002 (QR adicional temporario)
+  # CLIENTE: manoel-raimundo-januario
+  # CODIGO: 6v53v5
+  RewriteRule ^m/6v53v5/?$ https://www.eternizandoo.com/memorial/manoel-raimundo-januario-08-03-2026 [R=302,L,NE]
+
   # 000003
   # CLIENTE: monica-de-souza-farias
   # CODIGO: c66zpt
@@ -84,6 +89,11 @@
   # CLIENTE: marizete-gomes-dos-santos-31-05-2026
   # CODIGO: g85guy
   RewriteRule ^m/g85guy/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
+
+  # 000008 (QR adicional temporario)
+  # CLIENTE: marizete-gomes-dos-santos
+  # CODIGO: d6pw5m
+  RewriteRule ^m/d6pw5m/?$ https://www.eternizandoo.com/memorial/marizete-gomes-dos-santos-31-05-2026 [R=302,L,NE]
 
   # 000009
   # CLIENTE: jackson-soares-dos-santos-20-12-2009
